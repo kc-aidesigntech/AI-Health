@@ -31,4 +31,49 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // --- Scroll Reveal Animations ---
+    const revealSelectors = [
+        '.hero-content',
+        '.page-content',
+        '.pillar-card',
+        '.stat-card',
+        '.mission-grid .card',
+        '.services-grid .service-card',
+        '.survey-charts > div',
+        '.testimonial',
+        '.plan-highlight .cta-panel',
+        '.phase-card',
+        '.survey-to-action .data-card',
+        '.giving-card',
+        '.partner-section .partner-card',
+        '.volunteer-section .story-card',
+        '.contact-card',
+        '.support-preview-inner',
+        '.support-actions a',
+        '.impact-list li'
+    ];
+
+    const revealElements = document.querySelectorAll(revealSelectors.join(', '));
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    revealElements.forEach(el => el.classList.add('reveal'));
+
+    if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: '0px 0px -10% 0px'
+        });
+
+        revealElements.forEach(el => observer.observe(el));
+    } else {
+        revealElements.forEach(el => el.classList.add('reveal-visible'));
+    }
+
 });
