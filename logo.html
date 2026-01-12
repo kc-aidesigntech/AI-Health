@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anderson Island Health · Logo Overview</title>
+    <link rel="stylesheet" href="https://use.typekit.net/siy6qpg.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .logo-hero {
+            background: linear-gradient(135deg, rgba(12,123,189,0.12), rgba(245,168,193,0.12));
+            text-align: center;
+            padding: 110px 24px 80px;
+        }
+
+        .logo-hero img {
+            max-width: 620px;
+            width: 86%;
+            margin: 0 auto 36px;
+        }
+
+        .logo-hero p {
+            max-width: 660px;
+            margin: 0 auto;
+        }
+
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+
+        .logo-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: rgba(12,123,189,0.08);
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .swatch {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.6);
+            box-shadow: 0 6px 12px rgba(22,50,79,0.12);
+        }
+
+        .swatch.ocean { background: linear-gradient(135deg, #1d9bd7, #0c7bbd); }
+        .swatch.evergreen { background: linear-gradient(135deg, #3ab795, #2b9e79); }
+        .swatch.coral { background: linear-gradient(135deg, #f5a8c1, #e784ab); }
+        .swatch.peach { background: linear-gradient(135deg, #fecfb8, #f9bda4); }
+
+        .logo-references {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .logo-references li {
+            list-style: none;
+            padding: 18px;
+            border-radius: 16px;
+            border: 1px solid rgba(12,123,189,0.12);
+            background: rgba(255,255,255,0.96);
+            box-shadow: 0 8px 22px rgba(22,50,79,0.08);
+        }
+
+        @media print {
+            body {
+                background: #ffffff;
+                padding: 0;
+                color: #1f2a3d;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            header {
+                box-shadow: none;
+                border-bottom: 1px solid rgba(12,123,189,0.12);
+            }
+
+            .logo-hero {
+                background: #0c7bbd;
+                padding: 80px 24px 60px;
+                color: #ffffff;
+            }
+
+            .logo-hero img {
+                max-width: 560px;
+                width: 80%;
+                margin-bottom: 28px;
+            }
+
+            .logo-hero h1,
+            .logo-hero p {
+                color: #ffffff;
+            }
+
+            .page-content {
+                padding: 40px 36px;
+                background: #f3f7fb;
+                border: 1px solid rgba(12,123,189,0.08);
+                border-radius: 20px;
+                margin-bottom: 24px;
+            }
+
+            .card,
+            .logo-references li {
+                box-shadow: none;
+                background: #ffffff;
+                border: 1px solid rgba(12,123,189,0.1);
+            }
+
+            .logo-chip {
+                background: rgba(12,123,189,0.12);
+            }
+
+            .logo-references {
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            }
+
+            footer {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <img src="assets/AI Health Custom Logo v9.png" alt="Anderson Island Health logo">
+        </a>
+        <button class="hamburger-menu" aria-label="Open navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="wellness.html">Wellness</a></li>
+                <li><a href="plans.html">Plans</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="logo.html" class="active">Logo</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="logo-hero">
+        <img src="assets/AI Health Custom Logo v9.png" alt="Anderson Island Health 2025 brand logo">
+        <h1>Logo Alignment Overview</h1>
+        <p>The refreshed Anderson Island Health logo balances sunrise warmth, island geography, and trustworthy type to mirror the priorities residents and partners named throughout the brand survey and planning references.</p>
+    </section>
+
+    <section class="page-content">
+        <p class="section-caption">Resident Priorities</p>
+        <h2>Built Around Core Brand Feelings</h2>
+        <div class="logo-grid">
+            <article class="card">
+                <h3>Care & Compassion</h3>
+                <p>The softened sunrise glow echoes the community’s call for gentle, people-first care.</p>
+                <div class="logo-chip"><span class="swatch coral"></span>Warm sunrise, gentle gradients</div>
+            </article>
+            <article class="card">
+                <h3>Community Connection</h3>
+                <p>Island silhouette anchors the logo in place, symbolising neighbors and shared landscape.</p>
+                <div class="logo-chip"><span class="swatch ocean"></span>Island horizon, reflective water</div>
+            </article>
+            <article class="card">
+                <h3>Trust & Reliability</h3>
+                <p>Clean sans serif wordmark keeps the mark timeless, confident, and easy to read.</p>
+                <div class="logo-chip"><span class="swatch evergreen"></span>Even stroke weight, steady rhythm</div>
+            </article>
+        </div>
+    </section>
+
+    <section class="page-content">
+        <p class="section-caption">Palette Signals</p>
+        <h2>Colors Taken From Island Moments</h2>
+        <div class="logo-grid">
+            <article class="card">
+                <h3>Ocean Blues</h3>
+                <p>Trust, professionalism, and the ferry-free access residents requested.</p>
+                <div class="logo-chip"><span class="swatch ocean"></span>#0c7bbd · #1d9bd7</div>
+            </article>
+            <article class="card">
+                <h3>Evergreen Teal</h3>
+                <p>Represents resilience and the volunteer spirit mentioned across survey responses.</p>
+                <div class="logo-chip"><span class="swatch evergreen"></span>#3ab795 · #2b9e79</div>
+            </article>
+            <article class="card">
+                <h3>Sunrise Coral</h3>
+                <p>Matches the rosy highlight residents associated with warmth and welcome.</p>
+                <div class="logo-chip"><span class="swatch coral"></span>#f5a8c1 · #e784ab</div>
+            </article>
+            <article class="card">
+                <h3>Peach Light</h3>
+                <p>Softens transitions, adding approachability noted in the identity brief.</p>
+                <div class="logo-chip"><span class="swatch peach"></span>#fecfb8 · #f9bda4</div>
+            </article>
+        </div>
+    </section>
+
+    <section class="page-content">
+        <p class="section-caption">Reference Alignment</p>
+        <h2>Meets the Checklist</h2>
+        <ul class="logo-references">
+            <li>
+                <h3>Logo Survey Summary</h3>
+                <p>✔ Friendly & inviting<br>✔ Island landscape without literal ferry<br>✔ Timeless typography</p>
+            </li>
+            <li>
+                <h3>Mission Statement</h3>
+                <p>✔ Whole-person care reflected through warm light<br>✔ Accessible on-island setting</p>
+            </li>
+            <li>
+                <h3>Identity Presentation</h3>
+                <p>✔ Balanced mark + wordmark system<br>✔ Works in single color for signage and docs</p>
+            </li>
+            <li>
+                <h3>Rural Health Response</h3>
+                <p>✔ Highlights on-island autonomy and calm<br>✔ Communicates readiness for partnerships</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="page-content">
+        <p class="section-caption">Usage Snapshot</p>
+        <h2>Where the Logo Shines</h2>
+        <div class="logo-grid">
+            <article class="card">
+                <h3>Digital Header</h3>
+                <p>High contrast on dark backgrounds preserves the sunrise glow.</p>
+            </article>
+            <article class="card">
+                <h3>Printed Collateral</h3>
+                <p>Flattened gradients keep details crisp on iOS native PDF viewers.</p>
+            </article>
+            <article class="card">
+                <h3>Merch & Signage</h3>
+                <p>Island silhouette reads clearly when scaled down or embroidered.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="page-content">
+        <p class="section-caption">Download</p>
+        <h2>Latest Assets</h2>
+        <p>Use the logo file located at <code>assets/AI Health Custom Logo v9.png</code> for digital needs. For print-ready or alternate lockups, reference the brand package in <code>references/AIHA Identity Presentation - Revise.pdf</code>.</p>
+    </section>
+</main>
+
+<footer class="theme-dark">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Anderson Island Health</h4>
+            <p>dba Anderson Island Healthcare Advocates, a nonprofit organization established in 2022.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Guiding Principles</h4>
+            <ul>
+                <li>Community-Led</li>
+                <li>Sustainable</li>
+                <li>Partner-Focused</li>
+                <li>Accessible</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p><strong>Therese Ngo Pasquier, MHA</strong><br>Board President<br>tnpasquier@gmail.com</p>
+            <p><strong>Glenn Kasman, MS</strong><br>Board Vice President<br>glennkasman@live.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2025 Anderson Island Health. All rights reserved.
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+

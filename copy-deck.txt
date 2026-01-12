@@ -1,0 +1,380 @@
+Anderson Island Health Website Copy Deck
+Generated: 2026-01-10
+
+============================================================
+index.html (Home)
+============================================================
+Header Navigation
+- Home
+- Wellness
+- Plans
+- Support
+- Logo
+
+Hero Section
+- Heading: Healthcare rooted on Anderson Island
+- Body: We deliver compassionate, whole-person care without requiring a ferry ride, so neighbors can access the services they deserve right here at home.
+- Primary CTA: Explore Wellness
+- Secondary CTA: Review Our Plans
+- Tertiary CTA: Support Our Journey
+
+Strategic Pillars Section
+- Eyebrow: Three guiding pillars shape our work
+- Heading: Your Role in Anderson Island Health
+- Card 1
+  - Title: Wellness
+  - Body: Discover priority services, community survey insights, and the care team that keeps our island healthy.
+  - Link Text: See how we care
+- Card 2
+  - Title: Plans
+  - Body: Track each milestone on our clinic roadmap—from zoning to mobile unit launch—anchored in resident feedback.
+  - Link Text: Follow the roadmap
+- Card 3
+  - Title: Support
+  - Body: Invest in the people, equipment, and outreach programs that bring healthcare closer to every household.
+  - Link Text: Fuel our mission
+
+Metrics Band
+- Eyebrow: Why on-island care matters
+- Heading: Neighbors are asking for accessible wellness
+- Intro Paragraph: Anderson Island’s 1,500 year-round residents rely on ferry travel for the simplest lab tests or prescriptions. A local clinic keeps care timely, affordable, and human.
+- Stat 1
+  - Value: 61.3
+  - Label: Median Age
+  - Copy: We support a growing population of seniors who prefer to age in their island homes.
+- Stat 2
+  - Value: 72%
+  - Label: Find Travel Burdensome
+  - Copy: Residents often delay care or pay extra for mainland visits because of ferry dependency.
+- Stat 3
+  - Value: 88%
+  - Label: Want On-Island Care
+  - Copy: Surveyed households overwhelmingly endorse local services as key to the island’s future.
+
+Plan Highlight
+- Heading: Building toward a mobile health hub
+- Body: A phased plan is already underway—co-designed with residents—to bring primary care, diagnostics, and visiting specialists directly to Anderson Island.
+- Pill List
+  - Community-backed survey data informs each decision.
+  - Capital campaign targets a $350K mobile clinic conversion.
+  - Integrated partnerships reduce 911 transports and ferry costs.
+- Side Panel
+  - Title: See the timeline
+  - Body: Explore the full roadmap—from zoning progress to the mobile clinic launch and long-term partnerships.
+  - CTA: Review Our Plans
+
+Support Preview
+- Eyebrow: Support
+- Heading: Every gift keeps care close to home
+- Body: Donations equip exam rooms, expand wellness visits, and create a neighbor-care fund so no one forgoes treatment.
+- CTAs
+  - Give to the mission
+  - Partner with AIH
+
+Footer (Home)
+- Anderson Island Health — dba Anderson Island Healthcare Advocates, a nonprofit organization established in 2022.
+- Guiding Principles: Community-Led; Sustainable; Partner-Focused; Accessible.
+- Contact Us
+  - Therese Ngo Pasquier, MHA — Board President — tnpasquier@gmail.com
+  - Glenn Kasman, MS — Board Vice President — glennkasman@live.com
+- Footer Bottom: © 2025 Anderson Island Health. All rights reserved.
+
+
+============================================================
+wellness.html (Wellness)
+============================================================
+Header Navigation (same as Home)
+
+Hero Section
+- Heading: Wellness
+- Body: Grounded in island values, we combine community data, trusted services, and a caring team to deliver whole-person health without leaving Anderson Island.
+
+Mission Grid
+- Eyebrow: Our foundation
+- Mission: Provide compassionate, accessible, whole-person health and wellness services on Anderson Island.
+- Vision: Empower every neighbor to thrive by meeting health needs close to home.
+- Guiding Principles
+  - Community-led and inclusive.
+  - Sustainable growth through lasting funding.
+  - Partner-focused and equitable.
+
+Island Snapshot
+- Eyebrow: Island Snapshot
+- Heading: Health needs of a growing rural community
+- Intro Paragraph: Our work is driven by the unique needs of Anderson Island residents, from multi-generational families to long-time seniors who want to age in place.
+- Stat 1: 1,571 — Total Population — Rapid growth and remote geography demand reliable on-island services.
+- Stat 2: 61.3 — Median Age — A community of older adults balancing chronic care and independent living.
+- Stat 3: 20.4% — Residents Below Poverty Line — Wellness must remain accessible regardless of income.
+
+Services Grid
+- Eyebrow: Key services residents rely on
+- Service Tiles
+  - Primary & Preventive Care — Routine visits, chronic care management, immunizations, and wellness coaching delivered locally.
+  - Diagnostics & Lab Work — On-island bloodwork, screenings, and basic imaging to reduce ferry trips for essential testing.
+  - Walk-In & Urgent Support — Minor urgent care, first aid, and telehealth support for timely answers when issues arise.
+  - Mental & Whole-Person Wellness — Behavioral health navigation, caregiver check-ins, and community wellness visits with EMT partners.
+  - Pharmacy Coordination — Medication pick-up support, refills, and education so residents stay on track without mainland travel.
+  - Specialty Pop-Ups — Rotating dental, cardiology, and allied services hosted through regional partnerships.
+
+Survey Section
+- Eyebrow: Community survey insights
+- Heading: Data that shapes every decision
+- Paragraph: In 2023, 262 households (representing 570 individuals) shared their healthcare needs—a response from roughly 40% of year-round residents.
+- Highlight: 88% of respondents believe on-island healthcare is vital for our future.
+- Note: We maintain the original chart formatting and introduced accent colors to highlight resident priorities.
+- Chart 1: Top healthcare needs today — Primary Care 84%; Lab Work 57%; Pharmacy 57%; Dental Care 50%; Urgent Care 49%.
+- Chart 2: Willingness to use on-island care — Walk-in / First Aid 81%; Basic Primary Care 67%; Lab Work / Diagnostics 59%; Pharmacy 53%.
+
+Testimonials
+- Eyebrow: Voices from the island
+- Quotes
+  - “We want to age in place on island. More difficult to get back and forth to the mainland.”
+  - “The ferry makes Dr visits difficult.”
+  - “This would save so much travel time.”
+  - “It would allow seniors to stay longer here on the island as they age.”
+  - “We've had to use the fire boat on two occasions for urgent care. This is not ideal for anybody, especially in an emergency situation.”
+  - “I won't travel to town to see a doctor unless I'm dying.”
+
+Contact Band
+- Eyebrow: Connect with our team
+- Heading: We are ready to hear from you
+- Paragraph: Anderson Island Health is led by volunteers who live this mission every day. Reach out to collaborate, ask questions, or schedule a conversation about services.
+- Card Title: Board Leadership
+- Contacts
+  - Therese Ngo Pasquier, MHA — Board President — tnpasquier@gmail.com
+  - Glenn Kasman, MS — Board Vice President — glennkasman@live.com
+- CTA: Message the team
+
+Footer (Wellness) — same copy as Home footer
+
+
+============================================================
+plans.html (Plans)
+============================================================
+Header Navigation (same items)
+
+Hero Section
+- Heading: Our Plans
+- Body: Our roadmap translates community survey results into tangible milestones—moving from data, to zoning, to a fully equipped mobile clinic serving every household.
+
+Plan Overview
+- Eyebrow: From insight to action
+- Heading: What residents told us
+- Bullet Highlights
+  - 84% rely on primary care off-island today—so we prioritize on-island appointments and telehealth support.
+  - 72% feel the ferry is a barrier—which is why we are investing in mobile services and visiting specialists.
+  - 81% would use walk-in care immediately, underscoring the need for rapid deployment of urgent support.
+- Side Panel
+  - Title: Plan Downloads
+  - Body: Share the roadmap with partners, agencies, and neighbors advocating for better access.
+  - CTA: Read program response
+
+Implementation Timeline
+- Eyebrow: Implementation timeline
+- Phase 1 — Completed — Assess Community Needs — Completed surveys, listening sessions, and forums established the baseline for services and funding strategies.
+- Phase 2 — In Progress · 0-6 months — Foundation & Immediate Access
+  - Continue “Share and Care” wellness drop-ins and home visits.
+  - Finalize land use and zoning alignment with Pierce County.
+  - Secure regional provider MOUs and volunteer coverage.
+- Phase 3 — Next · 6-18 months — Mobile & Rotating Care Model
+  - Launch a capital campaign to fundraise $350,000 for a mobile clinic equipped for primary care, diagnostics, and telehealth.
+  - Staff the unit with a primary care provider, nurse, and clinic coordinator.
+  - Offer walk-in hours three days per week with lab, pharmacy, and mental health access.
+  - Host rotating specialists to match top survey requests.
+- Phase 4 — Long-Term · 18-36 months — Integrated Partnerships
+  - Develop an Integrated Mobile Health model with EMS partners so advanced practice clinicians can respond alongside medics, reducing unnecessary emergency transports.
+
+Survey-to-Action Grid
+- Eyebrow: Connecting data to facilities
+- Cards
+  - Mobile Clinic — 84% of households use primary care — the mobile clinic ensures continuity while permanent space is secured.
+  - Neighborhood Wellness — 42% cite mobility limitations; volunteer wellness visits and telehealth keep them engaged.
+  - Future Fixed Site — Zoning updates and long-term capital planning create room for a permanent clinic as demand grows.
+
+Callout Panel
+- Heading: Together we can accelerate every phase
+- Body: Join the support effort to help purchase equipment, expand staff coverage, and sustain outreach programs built from community insight.
+- CTA: Support Our Journey
+
+Footer (Plans) — same as Home
+
+
+============================================================
+support.html (Support)
+============================================================
+Header Navigation (same items)
+
+Hero Section
+- Heading: Support Our Journey
+- Body: When you give to Anderson Island Health, you ensure wellness services reach every neighbor—without a ferry trip or financial barrier.
+- CTA: Make a gift
+
+Support Summary
+- Eyebrow: Why your support matters
+- Heading: Donations bring the clinic to life
+- Paragraph: Your generosity fuels capital investments, staffing, and wellness services designed from community research.
+- Impact List
+  - Launch the $350K mobile clinic—including exam rooms, diagnostic equipment, and telehealth technology.
+  - Expand wellness visits and aging-in-place support for residents facing mobility challenges.
+  - Seed the neighbor-care fund so no one delays treatment because of cost.
+- Giving Card
+  - Title: Ways to give
+  - Body: Choose the route that matches your passion for rural healthcare.
+  - Options
+    - Monthly Advocate — Provide stable funding for operations and volunteer coordination.
+    - Capital Champion — Invest in the mobile clinic build-out, medical equipment, and vehicle wrap.
+    - Neighbor Care Supporter — Cover transportation, prescriptions, or copays for households in need.
+  - CTA: Email to pledge
+
+Partner Section
+- Eyebrow: Partner with us
+- Cards
+  - Healthcare Collaborators — Join visiting specialist rotations, provide telehealth coverage, or share surplus equipment to expand island access.
+  - Community Organizations — Co-host wellness events, screenings, and education sessions that meet residents where they are.
+  - Public Agencies — Collaborate on zoning, infrastructure, and emergency response models to sustain on-island care.
+
+Volunteer Section
+- Eyebrow: More ways to help
+- Heading: Volunteer or share your story
+- Paragraph: Every conversation helps refine our services. Volunteer your skills, host a listening session, or share how on-island care would impact your household.
+- Bullet List
+  - Join outreach tables at ferry landings and community events.
+  - Support data entry, grant writing, or campaign communications.
+  - Offer translation or accessibility support for neighbors with special needs.
+- Story Card
+  - Title: Tell us your story
+  - Body: Stories help us communicate the urgency of rural healthcare investment.
+  - CTA: Share with the team
+
+Contact Section
+- Eyebrow: Connect today
+- Card Title: Contact the Board
+- Contacts
+  - Therese Ngo Pasquier, MHA — Board President — tnpasquier@gmail.com
+  - Glenn Kasman, MS — Board Vice President — glennkasman@live.com
+- Paragraph: We welcome strategic conversations with donors, foundations, and agency partners.
+- Form Labels: Name; Email; Subject; Message; CTA Button — Send Message
+
+Footer (Support) — same as Home
+
+
+============================================================
+logo.html (Logo Overview)
+============================================================
+Header Navigation (same items)
+
+Hero Section
+- Image Alt: Anderson Island Health 2025 brand logo
+- Heading: Logo Alignment Overview
+- Body: The refreshed Anderson Island Health logo balances sunrise warmth, island geography, and trustworthy type to mirror the priorities residents and partners named throughout the brand survey and planning references.
+
+Resident Priorities
+- Eyebrow: Resident Priorities
+- Heading: Built Around Core Brand Feelings
+- Card 1 — Care & Compassion — The softened sunrise glow echoes the community’s call for gentle, people-first care. Chip: Warm sunrise, gentle gradients.
+- Card 2 — Community Connection — Island silhouette anchors the logo in place, symbolising neighbors and shared landscape. Chip: Island horizon, reflective water.
+- Card 3 — Trust & Reliability — Clean sans serif wordmark keeps the mark timeless, confident, and easy to read. Chip: Even stroke weight, steady rhythm.
+
+Palette Signals
+- Eyebrow: Palette Signals
+- Heading: Colors Taken From Island Moments
+- Card 1 — Ocean Blues — Trust, professionalism, and the ferry-free access residents requested. Chip: #0c7bbd · #1d9bd7.
+- Card 2 — Evergreen Teal — Represents resilience and the volunteer spirit mentioned across survey responses. Chip: #3ab795 · #2b9e79.
+- Card 3 — Sunrise Coral — Matches the rosy highlight residents associated with warmth and welcome. Chip: #f5a8c1 · #e784ab.
+- Card 4 — Peach Light — Softens transitions, adding approachability noted in the identity brief. Chip: #fecfb8 · #f9bda4.
+
+Reference Alignment
+- Eyebrow: Reference Alignment
+- Heading: Meets the Checklist
+- Logo Survey Summary — Friendly & inviting; Island landscape without literal ferry; Timeless typography.
+- Mission Statement — Whole-person care reflected through warm light; Accessible on-island setting.
+- Identity Presentation — Balanced mark + wordmark system; Works in single color for signage and docs.
+- Rural Health Response — Highlights on-island autonomy and calm; Communicates readiness for partnerships.
+
+Usage Snapshot
+- Eyebrow: Usage Snapshot
+- Heading: Where the Logo Shines
+- Tiles: Digital Header — High contrast on dark backgrounds preserves the sunrise glow. Printed Collateral — Flattened gradients keep details crisp on iOS native PDF viewers. Merch & Signage — Island silhouette reads clearly when scaled down or embroidered.
+
+Download Section
+- Eyebrow: Download
+- Heading: Latest Assets
+- Body: Use the logo file located at assets/AI Health Custom Logo v9.png for digital needs. For print-ready or alternate lockups, reference the brand package in references/AIHA Identity Presentation - Revise.pdf.
+
+Footer (Logo) — same structure as Home footer (updated copy without citations)
+
+
+============================================================
+about.html
+============================================================
+- Notice: If you are not redirected automatically, visit Wellness.
+- Footer content same as Home footer.
+
+
+============================================================
+logo_survey/survey-results.html
+============================================================
+Title Page
+- Title: Anderson Island Health Logo Survey
+- Lede: Neighbors shared how the refreshed identity should feel—grounded in care, connection, and the calm of island life.
+- Credit Line: © Kolbi Christianson | AI DESIGN TECH | kchristianson@aidesigntech.com | www.aidesigntech.com
+
+Community Pulse Section
+- Heading: Community Pulse
+- Intro: Residents emphasized a welcoming, community-forward story that celebrates shared care and trust on Anderson Island.
+- Card 1 — Care & Compassion — Care, compassion, and comfort were the most repeated words, signaling that the logo must instantly feel supportive. Badges: Care; Compassion; Comfort.
+- Card 2 — Community Connection — Neighbors described the brand as an emblem of belonging—reflecting an island network that looks after one another. Badges: Community; Warmth; Advocacy.
+- Card 3 — Trust & Reliability — Trust and reliability were identified as the primary message, reinforcing the need for confident, timeless typography and mark-making. Badges: Trust; Reliability; Service.
+
+Visual Priorities Section
+- Heading: Visual Priorities
+- Intro: Participants outlined the ingredients that should appear in the final logo and how the new system should balance modern energy with enduring credibility.
+- Subheading: Elements that matter most
+  - Sense of community & connection — 94%
+  - Calm, serene feeling — 89%
+  - Natural landscape cues — 86%
+  - Movement or journey motifs — 61%
+  - Historical references — 38%
+- Footnote: Percent of respondents rating each element as “essential” or “very important.”
+- Subheading: Style direction & palette
+  - Statement: Respondents prefer a friendly, timeless look accented by luminous island hues and welcoming typography.
+  - Badges: Friendly & inviting; Comforting; Approachable.
+  - Palette Descriptions
+    - Ocean Blues — Signal trust, professionalism, and the surrounding waters that define island life.
+    - Evergreen Teal — Represents natural wellness, volunteer spirit, and year-round vitality.
+    - Sunrise Coral — Introduces warmth and optimism, echoing the rosy highlight seen in the selected mark.
+    - Peach Light — Softens gradients and adds approachability when paired with the cooler tones.
+
+Design Guardrails Section
+- Heading: Design Guardrails
+- Column 1 — Lean into
+  - Island silhouettes or interconnected forms that symbolize belonging and shared care.
+  - Calming gradients that transition from turquoise to soft coral, mirroring local sunrise light.
+  - Clean, humanist typography that can stretch from signage to digital touchpoints.
+- Column 2 — Avoid
+  - Traditional medical crosses that feel generic rather than community-built.
+  - Illustrations of ferry boats or literal transport imagery.
+  - Highly specific flora or fauna that leave some neighbors out of the story.
+
+Strategic Conclusions
+- Heading: Strategic Conclusions
+- Paragraph: The logo should embody a neighbor-first health experience—calm, collaborative, and unmistakably Anderson Island.
+- Bullet Points
+  - Lead with connection. Design around shared humanity—interlocking shapes or layered gradients that feel like people coming together.
+  - Balance calm with momentum. Pair gentle blues and teals with a spark of coral to suggest proactive care without sacrificing serenity.
+  - Showcase island warmth. Use rounded letterforms, approachable spacing, and subtle landscape cues to emphasize local pride.
+  - Create room for storytelling. Ensure the logo system scales into sub-marks and campaign graphics that highlight programs, volunteers, and donors.
+
+Download Note (from tables)
+- Plan Downloads CTA: Read program response (PDF).
+
+Footer (Logo Survey PDF Print) — None (hidden for print); primary copy captured above.
+
+
+============================================================
+Additional Notes
+============================================================
+- Email addresses present in multiple pages: tnpasquier@gmail.com and glennkasman@live.com.
+- CTA labels should keep capitalization as listed.
+- All © lines reflect year 2025 unless otherwise noted.
+

@@ -53,10 +53,30 @@ document.addEventListener('DOMContentLoaded', function() {
         '.impact-list li'
     ];
 
-    const revealElements = document.querySelectorAll(revealSelectors.join(', '));
+    const revealElements = Array.from(document.querySelectorAll(revealSelectors.join(', ')));
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const revealVariants = ['lift', 'slide-left', 'slide-right', 'zoom'];
 
-    revealElements.forEach(el => el.classList.add('reveal'));
+    let currentSection = null;
+    let sequenceIndex = 0;
+
+    revealElements.forEach(el => {
+        el.classList.add('reveal');
+
+        const section = el.closest('section, header, footer, main') || document.body;
+        if (section !== currentSection) {
+            currentSection = section;
+            sequenceIndex = 0;
+        }
+
+        const delay = Math.min(sequenceIndex * 0.14, 0.56);
+        el.style.setProperty('--reveal-delay', `${delay}s`);
+
+        const variant = revealVariants[sequenceIndex % revealVariants.length];
+        el.dataset.revealVariant = variant;
+
+        sequenceIndex += 1;
+    });
 
     if (!prefersReducedMotion && 'IntersectionObserver' in window) {
         const observer = new IntersectionObserver((entries, obs) => {

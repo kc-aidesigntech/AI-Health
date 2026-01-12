@@ -101,14 +101,36 @@ hr {
 /* --- Motion Utilities --- */
 .reveal {
     opacity: 0;
-    transform: translateY(32px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-    will-change: opacity, transform;
+    transform: translate3d(0, 48px, 0) scale(0.96);
+    filter: blur(16px);
+    transition:
+        opacity 0.69s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 1.04s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 0.69s ease;
+    transition-delay: var(--reveal-delay, 0s);
+    will-change: opacity, transform, filter;
+}
+
+.reveal[data-reveal-variant="lift"] {
+    transform: translate3d(0, 56px, 0) scale(0.94);
+}
+
+.reveal[data-reveal-variant="slide-left"] {
+    transform: translate3d(-52px, 36px, 0) scale(0.94);
+}
+
+.reveal[data-reveal-variant="slide-right"] {
+    transform: translate3d(52px, 36px, 0) scale(0.94);
+}
+
+.reveal[data-reveal-variant="zoom"] {
+    transform: translate3d(0, 64px, 0) scale(0.9);
 }
 
 .reveal.reveal-visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
 }
 
 /* --- Layout Utilities --- */
@@ -1047,6 +1069,7 @@ footer {
     .reveal {
         opacity: 1 !important;
         transform: none !important;
+        filter: none !important;
         transition: none !important;
     }
 
