@@ -786,8 +786,16 @@ header {
     color: var(--light-text);
 }
 
+.contact-band .contact-card h3 {
+    color: #ffffff;
+}
+
+.contact-band .contact-card p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
 .contact-band .contact-card a {
-    color: var(--accent-sky);
+    color: rgba(255, 255, 255, 0.9);
     font-weight: 600;
 }
 
