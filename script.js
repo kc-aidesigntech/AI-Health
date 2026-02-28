@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     await injectNavbar();
     initNavigation();
     initReveal();
+    initLeadership();
+    initFloatingDonate();
 });
 
 async function injectNavbar() {
@@ -114,5 +116,110 @@ function initReveal() {
         revealElements.forEach(el => observer.observe(el));
     } else {
         revealElements.forEach(el => el.classList.add('reveal-visible'));
+    }
+}
+
+function initLeadership() {
+    const cards = Array.from(document.querySelectorAll('.leader-card'));
+    if (!cards.length) return;
+
+    const modal = document.getElementById('leader-modal');
+    if (!modal) return;
+    const backdrop = modal?.querySelector('.leader-modal-backdrop');
+    const nameEl = modal?.querySelector('#leader-modal-name');
+    const roleEl = modal?.querySelector('#leader-modal-role');
+    const bioEl = modal?.querySelector('#leader-modal-bio');
+    const closeBtn = modal?.querySelector('.leader-close');
+    const prevBtn = modal?.querySelector('.leader-prev');
+    const nextBtn = modal?.querySelector('.leader-next');
+
+    let activeIndex = 0;
+
+    const openModal = (index) => {
+        activeIndex = (index + cards.length) % cards.length;
+        const card = cards[activeIndex];
+        const name = card.dataset.name || '';
+        const role = card.dataset.role || '';
+        const bio = card.dataset.bio || 'Bio coming soon.';
+
+        if (nameEl) nameEl.textContent = name;
+        if (roleEl) roleEl.textContent = role;
+        if (bioEl) bioEl.textContent = bio;
+
+        modal?.classList.add('active');
+        modal?.setAttribute('aria-hidden', 'false');
+        closeBtn?.focus({ preventScroll: true });
+    };
+
+    const closeModal = () => {
+        modal?.classList.remove('active');
+        modal?.setAttribute('aria-hidden', 'true');
+    };
+
+    const showPrev = () => openModal(activeIndex - 1);
+    const showNext = () => openModal(activeIndex + 1);
+
+    cards.forEach((card, index) => {
+        const trigger = card.querySelector('.leader-expand') || card;
+        trigger.addEventListener('click', (event) => {
+            event.stopPropagation();
+            openModal(index);
+        });
+        card.addEventListener('click', () => openModal(index));
+        card.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                openModal(index);
+            }
+        });
+        card.setAttribute('tabindex', '0');
+    });
+
+    closeBtn?.addEventListener('click', closeModal);
+    backdrop?.addEventListener('click', closeModal);
+    prevBtn?.addEventListener('click', showPrev);
+    nextBtn?.addEventListener('click', showNext);
+
+    document.addEventListener('keydown', (e) => {
+        if (!modal?.classList.contains('active')) return;
+        if (e.key === 'Escape') closeModal();
+        if (e.key === 'ArrowLeft') showPrev();
+        if (e.key === 'ArrowRight') showNext();
+    });
+}
+
+function initFloatingDonate() {
+    const donateButton = document.querySelector('.floating-donate');
+    const missionSection = document.querySelector('#mission');
+    if (!donateButton || !missionSection) return;
+
+    const show = () => donateButton.classList.add('active');
+    const hide = () => donateButton.classList.remove('active');
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    hide();
+                } else {
+                    show();
+                }
+            });
+        }, {
+            threshold: 0.2,
+            rootMargin: '0px 0px -10% 0px'
+        });
+        observer.observe(missionSection);
+    } else {
+        // Fallback for older browsers
+        const check = () => {
+            const rect = missionSection.getBoundingClientRect();
+            if (rect.bottom < 0 || rect.top > window.innerHeight) {
+                show();
+            } else {
+                hide();
+            }
+        };
+        window.addEventListener('scroll', check, { passive: true });
+        check();
     }
 }
