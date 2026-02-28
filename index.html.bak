@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anderson Island Health</title>
+    <link rel="stylesheet" href="https://use.typekit.net/siy6qpg.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/AI Health Custom Logo v9.png" alt="Anderson Island Health logo">
+            </a>
+            <button class="hamburger-menu" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="wellness.html">Wellness</a></li>
+                    <li><a href="plans.html">Plans</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="logo.html">Logo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero-gradient">
+            <div class="hero-content">
+                <h1>Healthcare rooted on Anderson Island</h1>
+                <p>We deliver compassionate, whole-person care without requiring a ferry ride, so neighbors can access the services they deserve right here at home. <!-- cite: 5 --></p>
+                <div class="hero-actions">
+                    <a class="cta-button" href="wellness.html">Explore Wellness</a>
+                    <a class="cta-button-outline" href="plans.html">Review Our Plans</a>
+                    <a class="cta-button-secondary" href="support.html">Support Our Journey</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-content strategic-pillars">
+            <p class="section-caption">Three guiding pillars shape our work</p>
+            <h2>Your Role in Anderson Island Health</h2>
+            <div class="grid-3-col">
+                <article class="pillar-card">
+                    <h3>Wellness</h3>
+                    <p>Discover priority services, community survey insights, and the care team that keeps our island healthy.</p>
+                    <a class="link-arrow" href="wellness.html">See how we care</a>
+                </article>
+                <article class="pillar-card">
+                    <h3>Plans</h3>
+                    <p>Track each milestone on our clinic roadmap—from zoning to mobile unit launch—anchored in resident feedback.</p>
+                    <a class="link-arrow" href="plans.html">Follow the roadmap</a>
+                </article>
+                <article class="pillar-card">
+                    <h3>Support</h3>
+                    <p>Invest in the people, equipment, and outreach programs that bring healthcare closer to every household.</p>
+                    <a class="link-arrow" href="support.html">Fuel our mission</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="page-content metrics-band">
+            <div class="metrics-intro">
+                <p class="section-caption">Why on-island care matters</p>
+                <h2>Neighbors are asking for accessible wellness</h2>
+                <p class="large-text">Anderson Island&rsquo;s 1,500 year-round residents rely on ferry travel for the simplest lab tests or prescriptions. A local clinic keeps care timely, affordable, and human. <!-- cite: 13 --><!-- cite: 14 --></p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">61.3</div>
+                    <div class="stat-label">Median Age <!-- cite: 166 --></div>
+                    <p>We support a growing population of seniors who prefer to age in their island homes. <!-- cite: 19 --></p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">72%</div>
+                    <div class="stat-label">Find Travel Burdensome <!-- cite: 62 --></div>
+                    <p>Residents often delay care or pay extra for mainland visits because of ferry dependency. <!-- cite: 32 --></p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">88%</div>
+                    <div class="stat-label">Want On-Island Care <!-- cite: 36 --></div>
+                    <p>Surveyed households overwhelmingly endorse local services as key to the island&rsquo;s future.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-content plan-highlight">
+            <div class="grid-2-col reverse-mobile">
+                <div>
+                    <h2>Building toward a mobile health hub</h2>
+                    <p>A phased plan is already underway—co-designed with residents—to bring primary care, diagnostics, and visiting specialists directly to Anderson Island. <!-- cite: 83 --><!-- cite: 107 --></p>
+                    <ul class="pill-list">
+                        <li class="pill">Community-backed survey data informs each decision. <!-- cite: 33 --></li>
+                        <li class="pill">Capital campaign targets a $350K mobile clinic conversion. <!-- cite: 107 --></li>
+                        <li class="pill">Integrated partnerships reduce 911 transports and ferry costs. <!-- cite: 133 --></li>
+                    </ul>
+                </div>
+                <div class="cta-panel">
+                    <h3>See the timeline</h3>
+                    <p>Explore the full roadmap—from zoning progress to the mobile clinic launch and long-term partnerships.</p>
+                    <a class="cta-button" href="plans.html">Review Our Plans</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="support-preview">
+            <div class="page-content support-preview-inner">
+                <div>
+                    <p class="section-caption">Support</p>
+                    <h2>Every gift keeps care close to home</h2>
+                    <p class="large-text">Donations equip exam rooms, expand wellness visits, and create a neighbor-care fund so no one forgoes treatment.</p>
+                </div>
+                <div class="support-actions">
+                    <a class="cta-button" href="support.html">Give to the mission</a>
+                    <a class="cta-button-outline" href="support.html#partner">Partner with AIH</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="theme-dark">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Anderson Island Health</h4>
+                <p>dba Anderson Island Healthcare Advocates, a nonprofit organization established in 2022. <!-- cite: 4 --></p>
+            </div>
+            <div class="footer-section">
+                <h4>Guiding Principles <!-- cite: 150-152 --></h4>
+                <ul>
+                    <li>Community-Led</li>
+                    <li>Sustainable</li>
+                    <li>Partner-Focused</li>
+                    <li>Accessible</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p><strong>Therese Ngo Pasquier, MHA</strong><br>Board President <!-- cite: 160 --><br>tnpasquier@gmail.com <!-- cite: 161 --></p>
+                <p><strong>Glenn Kasman, MS</strong><br>Board Vice President <!-- cite: 162 --><br>glennkasman@live.com <!-- cite: 163 --></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Anderson Island Health. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

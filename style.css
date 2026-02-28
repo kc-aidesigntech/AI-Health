@@ -811,6 +811,12 @@ header {
     gap: 24px;
 }
 
+/* Allow timeline layout anywhere */
+.timeline {
+    display: grid;
+    gap: 24px;
+}
+
 .phase-card {
     position: relative;
     padding: 28px;

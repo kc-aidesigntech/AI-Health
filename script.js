@@ -1,6 +1,24 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async () => {
+    await injectNavbar();
+    initNavigation();
+    initReveal();
+});
 
-    // --- Mobile Hamburger Menu ---
+async function injectNavbar() {
+    const target = document.querySelector('[data-include="navbar"]');
+    if (!target) return;
+
+    try {
+        const response = await fetch('partials/navbar.html', { cache: 'no-cache' });
+        if (!response.ok) throw new Error(`Navbar request failed: ${response.status}`);
+        const markup = await response.text();
+        target.innerHTML = markup;
+    } catch (error) {
+        console.error('Could not load navbar include', error);
+    }
+}
+
+function initNavigation() {
     const hamburger = document.querySelector('.hamburger-menu');
     const navLinks = document.querySelector('.nav-links');
 
@@ -30,7 +48,9 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.add('active');
         }
     });
+}
 
+function initReveal() {
     // --- Scroll Reveal Animations ---
     const revealSelectors = [
         '.hero-content',
@@ -95,5 +115,4 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         revealElements.forEach(el => el.classList.add('reveal-visible'));
     }
-
-});
+}
