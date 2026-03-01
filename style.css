@@ -5,6 +5,12 @@
     --primary-rgb: 12, 123, 189;
     --primary-dark-rgb: 10, 79, 138;
     --accent-coral: #f5a8c1;
+    --sunrise-coral: #e19ab5;
+    --sunrise-coral-rgb: 225, 154, 181;
+    --evergreen-teal: #59a889;
+    --evergreen-teal-rgb: 89, 168, 137;
+    --peach-light: #f3c6b1;
+    --peach-light-rgb: 243, 198, 177;
     --accent-coral-rgb: 245, 168, 193;
     --accent-teal: #58c0d9;
     --accent-teal-rgb: 88, 192, 217;
@@ -227,6 +233,13 @@ hr {
     border-radius: 999px;
     font-weight: 600;
     border: 1px solid rgba(0,152,187,0.18);
+}
+
+#links .cta-panel .pill {
+    background: #ffffff;
+    color: var(--navy);
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 6px 14px rgba(22,50,79,0.08);
 }
 
 .card {
@@ -825,6 +838,48 @@ header {
     gap: 24px;
 }
 
+.timeline-section {
+    position: relative;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    overflow: visible;
+}
+
+.timeline-section::before {
+    content: none;
+}
+
+.timeline-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+.timeline .phase-card {
+    border-top: 3px solid rgba(var(--primary-rgb), 0.22);
+}
+
+/* First card (wrapped with graphic) */
+.plan-hero-wrap .phase-card {
+    border-top-color: rgba(var(--evergreen-teal-rgb), 0.5);
+}
+.plan-hero-wrap .phase-card .status {
+    background: rgba(var(--primary-rgb), 0.18); /* blue pill */
+    color: var(--navy);
+}
+
+/* Remaining cards in order: blue, coral, peach, blue */
+.timeline > .phase-card:nth-of-type(1) { border-top-color: rgba(var(--primary-rgb), 0.3); }
+.timeline > .phase-card:nth-of-type(2) { border-top-color: rgba(var(--sunrise-coral-rgb), 0.48); }
+.timeline > .phase-card:nth-of-type(3) { border-top-color: rgba(var(--peach-light-rgb), 0.55); }
+.timeline > .phase-card:nth-of-type(4) { border-top-color: rgba(var(--primary-rgb), 0.3); }
+
+.timeline > .phase-card:nth-of-type(1) .status { background: rgba(var(--sunrise-coral-rgb), 0.24); color: var(--navy); }
+.timeline > .phase-card:nth-of-type(2) .status { background: rgba(var(--evergreen-teal-rgb), 0.2); color: var(--navy); }
+.timeline > .phase-card:nth-of-type(3) .status { background: rgba(var(--peach-light-rgb), 0.26); color: var(--navy); }
+.timeline > .phase-card:nth-of-type(4) .status { background: rgba(var(--primary-rgb), 0.18); color: var(--navy); }
+
 .plan-header {
     position: relative;
     display: flex;
@@ -1041,6 +1096,7 @@ header {
     border-radius: 0;
     overflow: hidden;
     box-shadow: 0 26px 60px rgba(22,50,79,0.24);
+    border-top: 6px solid rgba(var(--peach-light-rgb), 0.5);
 }
 
 @media (max-width: 900px) {
@@ -1069,6 +1125,7 @@ header {
 
 .plan-hero-wrap .phase-card {
     padding-top: 38px;
+    border-left: none;
 }
 
 .plan-hero-wrap:hover .plan-hero-graphic {
@@ -1113,18 +1170,14 @@ header {
     position: relative;
     padding: 28px;
     border-radius: 18px;
-    border: 1px solid rgba(0,152,187,0.12);
-    box-shadow: 0 18px 34px rgba(22,50,79,0.08);
-    background: linear-gradient(170deg, rgba(255,255,255,0.98), rgba(224,243,248,0.82));
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 10px 24px rgba(22,50,79,0.07);
+    background: #ffffff;
     overflow: hidden;
 }
 
 .phase-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at top left, rgba(0,152,187,0.18), transparent 62%);
-    pointer-events: none;
+    content: none;
 }
 
 .phase-card > * {
@@ -1243,6 +1296,133 @@ header {
     margin-bottom: 6px;
 }
 
+.giving-side {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) 220px;
+    gap: 16px;
+    align-items: stretch;
+}
+
+.giving-side > * {
+    height: 100%;
+}
+
+.thermo-card {
+    width: 100%;
+    min-width: 200px;
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 16px;
+    padding: 14px;
+    box-shadow: 0 12px 28px rgba(22,50,79,0.08);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.thermo-card h4 {
+    margin-bottom: 6px;
+}
+
+.thermo-label {
+    font-weight: 1000;
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.thermo-body {
+    position: relative;
+    margin: 0 auto 12px;
+    width: 34px;
+    height: 100%;
+    min-height: 240px;
+    border-radius: 18px;
+    background: #eef3f9;
+    border: none;
+    overflow: visible; /* allow ticks to show outside */
+}
+
+.thermo-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: #0c7bbd;
+    transition: height 0.4s ease;
+}
+
+.thermo-bulb {
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #0c7bbd;
+    border: none;
+    box-shadow: 0 10px 22px rgba(22,50,79,0.18);
+}
+
+.thermo-updated {
+    font-size: 0.9rem;
+    color: var(--muted-text);
+    margin: 6px 0 0;
+}
+
+.thermo-ticks {
+    position: absolute;
+    top: 6px;
+    bottom: 6px;
+    left: calc(100% - 14px);
+    width: 120px;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.thermo-ticks .tick {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0;
+    font-size: 0.9rem;
+    color: var(--muted-text);
+}
+
+.thermo-ticks .tick-line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 32px;
+    height: 2px;
+    border-radius: 2px;
+    background: rgba(0,0,0,0.55);
+}
+
+.thermo-ticks .tick-label {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(calc(-50% + var(--tick-label-offset, 0px)));
+    min-width: 60px;
+}
+
+@media (max-width: 900px) {
+    .giving-side {
+        grid-template-columns: 1fr;
+    }
+
+    .thermo-card {
+        min-width: 0;
+        max-width: 260px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 .partner-section .partner-card,
 .volunteer-section .story-card {
     position: relative;

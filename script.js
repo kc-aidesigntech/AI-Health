@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     initLeadership();
     initFloatingDonate();
     initParallaxBanner();
+    const progressConfig = await loadGivingProgress();
+    if (progressConfig) applyGivingProgress(progressConfig);
+    initThermometers(progressConfig);
 });
 
 async function injectNavbar() {
@@ -254,4 +257,86 @@ function initParallaxBanner() {
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', update);
     update();
+}
+
+async function loadGivingProgress() {
+    try {
+        const res = await fetch('giving-progress.json', { cache: 'no-cache' });
+        if (!res.ok) return null;
+        return await res.json();
+    } catch (err) {
+        console.warn('Could not load giving-progress.json', err);
+        return null;
+    }
+}
+
+function applyGivingProgress(config) {
+    const card = document.querySelector('.thermo-card');
+    if (!card || !config) return;
+    if (config.goal) card.dataset.goal = config.goal;
+    if (config.current) card.dataset.current = config.current;
+    if (config.updated) card.dataset.updated = config.updated;
+    if (config.tickLabelOffset !== undefined) {
+        card.dataset.tickLabelOffset = config.tickLabelOffset;
+    }
+}
+
+function initThermometers(config) {
+    const cards = document.querySelectorAll('.thermo-card');
+    if (!cards.length) return;
+
+    cards.forEach(card => {
+        const goal = parseFloat(card.dataset.goal || config?.goal || '0');
+        const currentRaw = parseFloat(card.dataset.current || config?.current || '0');
+        const current = goal > 0 ? Math.min(currentRaw, goal) : currentRaw;
+        const fill = card.querySelector('.thermo-fill');
+        const label = card.querySelector('[data-thermo-label]');
+        const updated = card.dataset.updated || config?.updated;
+        const updatedEl = card.querySelector('.thermo-updated');
+        const ticksWrap = card.querySelector('.thermo-ticks');
+        const tickLabelOffset = parseFloat((config?.tickLabelOffset ?? card.dataset.tickLabelOffset ?? '0'));
+        const divisions = parseInt((config?.divisions ?? card.dataset.divisions ?? '4'), 10);
+        const bulb = card.querySelector('.thermo-bulb');
+
+        if (goal > 0 && fill) {
+            const pct = Math.max(0, Math.min(100, (current / goal) * 100));
+            fill.style.height = `${pct}%`;
+            // Blend from blue to evergreen based on percent (0 -> blue, 100 -> green)
+            const start = [12, 123, 189]; // primary-rgb
+            const end = [89, 168, 137];   // evergreen-teal-rgb
+            const t = pct / 100;
+            const mix = start.map((c, i) => Math.round(c + (end[i] - c) * t));
+            const color = `rgb(${mix.join(',')})`;
+            fill.style.background = color;
+            if (bulb) bulb.style.background = color;
+        }
+
+        if (label) {
+            const currentText = isNaN(currentRaw) ? '—' : `$${Math.round(currentRaw).toLocaleString()}`;
+            const goalText = goal > 0 ? `$${Math.round(goal).toLocaleString()}` : 'Goal TBD';
+            label.textContent = `${currentText} of ${goalText}`;
+        }
+
+        if (updatedEl && updated) {
+            updatedEl.textContent = `Updated ${updated}`;
+        }
+
+        if (ticksWrap && goal > 0) {
+            const fractions = Array.from({ length: Math.max(1, divisions - 1) }, (_, i) => (i + 1) / divisions);
+            const ticks = fractions.map(f => {
+                const raw = goal * f;
+                const rounded = Math.max(500, Math.round(raw / 500) * 500);
+                const val = Math.min(goal, rounded);
+                const pct = Math.max(0, Math.min(100, (val / goal) * 100));
+                return { val, pct };
+            });
+            ticksWrap.style.setProperty('--tick-label-offset', `${tickLabelOffset}px`);
+            ticksWrap.innerHTML = ticks.map(t => `
+                <span class="tick" style="top:${100 - t.pct}%">
+                    <span class="tick-line"></span>
+                    <span class="tick-label">${t.val.toLocaleString()}</span>
+                </span>
+            `).join('');
+        }
+    });
 }
