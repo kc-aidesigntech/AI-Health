@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     initReveal();
     initLeadership();
     initFloatingDonate();
+    initParallaxBanner();
 });
 
 async function injectNavbar() {
@@ -222,4 +223,35 @@ function initFloatingDonate() {
         window.addEventListener('scroll', check, { passive: true });
         check();
     }
+}
+
+function initParallaxBanner() {
+    const banners = Array.from(document.querySelectorAll('.parallax-banner'));
+    if (!banners.length) return;
+
+    const update = () => {
+        banners.forEach((el) => {
+            const speed = parseFloat(el.dataset.parallaxSpeed || '0.25');
+            const rect = el.getBoundingClientRect();
+            const scrolled = window.scrollY || window.pageYOffset;
+            const offsetTop = el.offsetTop;
+            const yPos = (scrolled - offsetTop) * speed;
+            el.style.backgroundPosition = `center calc(50% + ${yPos}px)`;
+        });
+    };
+
+    let ticking = false;
+    const onScroll = () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                update();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', update);
+    update();
 }

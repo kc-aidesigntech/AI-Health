@@ -1005,6 +1005,25 @@ header {
     }
 }
 
+/* --- Parallax Banner --- */
+.parallax-banner {
+    position: relative;
+    min-height: 360px;
+    background-image: url('assets/photos/FERRY.2.JPG');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 40px 0;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 26px 60px rgba(22,50,79,0.24);
+}
+
+@media (max-width: 900px) {
+    .parallax-banner {
+        background-position: center center;
+    }
+}
 /* --- Floating Donate Button --- */
 .floating-donate {
     position: fixed;
