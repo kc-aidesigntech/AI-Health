@@ -1184,6 +1184,18 @@ header {
     color: #ffffff !important;
 }
 
+.cta-button.donate-primary {
+    background: var(--donate-teal) !important;
+    border: none !important;
+    color: #ffffff !important;
+}
+
+.cta-button.donate-primary:hover {
+    background: var(--donate-teal) !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
 .volunteer-cta {
     background: var(--dark-teal) !important;
     border: none !important;
