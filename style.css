@@ -1487,8 +1487,8 @@ header {
 
 .volunteer-dialog {
     position: relative;
-    max-width: 520px;
-    width: min(92vw, 520px);
+    max-width: 960px;
+    width: min(92vw, 960px);
     background: #ffffff;
     border-radius: 16px;
     padding: 24px 24px 28px 24px;
