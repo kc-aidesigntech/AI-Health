@@ -1164,7 +1164,7 @@ header {
 }
 
 .floating-donate.volunteer-trigger {
-    bottom: 78px;
+    bottom: 96px;
     background: var(--dark-teal) !important;
     border: none;
 }

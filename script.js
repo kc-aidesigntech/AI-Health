@@ -199,12 +199,12 @@ function initLeadership() {
 }
 
 function initFloatingDonate() {
-    const donateButton = document.querySelector('.floating-donate');
+    const buttons = Array.from(document.querySelectorAll('.floating-donate'));
     const missionSection = document.querySelector('#mission');
-    if (!donateButton || !missionSection) return;
+    if (!buttons.length || !missionSection) return;
 
-    const show = () => donateButton.classList.add('active');
-    const hide = () => donateButton.classList.remove('active');
+    const show = () => buttons.forEach(btn => btn.classList.add('active'));
+    const hide = () => buttons.forEach(btn => btn.classList.remove('active'));
 
     if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver((entries) => {
@@ -221,7 +221,6 @@ function initFloatingDonate() {
         });
         observer.observe(missionSection);
     } else {
-        // Fallback for older browsers
         const check = () => {
             const rect = missionSection.getBoundingClientRect();
             if (rect.bottom < 0 || rect.top > window.innerHeight) {
