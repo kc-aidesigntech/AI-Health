@@ -21,6 +21,7 @@
                     <a class="cta-button" href="#giving">Donate today</a>
                     <a class="cta-button-outline" href="#faqs">Read FAQs</a>
                     <a class="cta-button-secondary" href="#mission">Our mission</a>
+                    <a class="cta-button-secondary" href="#volunteer">Volunteer</a>
                 </div>
                 <p style="margin-top:18px; color: rgba(255,255,255,0.86);">Anderson Island Healthcare Advocates facilitates care delivery, sourcing professional services to bring care to our neighbors. While we are not a healthcare provider and do not offer medical services, we are committed to making it easier for you to access the health care you need.</p>
             </div>
@@ -43,7 +44,6 @@
                         <li class="pill">Sliding fee scale for uninsured</li>
                         <li class="pill">Access to 24/7 provider phone line</li>
                     </ul>
-                    <p style="margin-top:12px;">Mailing address: P.O. Box 88973, Steilacoom, WA 98388</p>
                     <a class="cta-button" href="#giving">Donate today</a>
                 </div>
             </div>
@@ -316,6 +316,7 @@
         </section>
 
         <a class="floating-donate" href="#giving" aria-label="Donate today">Donate today</a>
+        <a class="floating-donate volunteer-trigger" href="#volunteer" aria-label="Volunteer">Volunteer</a>
 
         <div class="profile-overlay" data-profile-overlay hidden>
             <div class="overlay-backdrop" data-overlay-close></div>
@@ -336,6 +337,41 @@
             </div>
         </div>
     </main>
+
+    <div class="volunteer-modal" aria-hidden="true">
+        <div class="volunteer-backdrop" data-volunteer-close></div>
+        <div class="volunteer-dialog" role="dialog" aria-modal="true" aria-label="Volunteer sign-up">
+            <button class="volunteer-close" type="button" data-volunteer-close aria-label="Close volunteer form">&times;</button>
+            <h3>Volunteer with AIHA</h3>
+            <p>Share your contact info and tell us how you’d like to help.</p>
+            <form class="volunteer-form">
+                <label for="vol-name">Full name</label>
+                <input id="vol-name" name="name" type="text" autocomplete="name" required>
+
+                <label for="vol-email">Email</label>
+                <input id="vol-email" name="email" type="email" autocomplete="email" required>
+
+                <label for="vol-phone">Phone (optional)</label>
+                <input id="vol-phone" name="phone" type="tel" autocomplete="tel">
+
+                <fieldset>
+                    <legend>Health/volunteer experience (select all that apply)</legend>
+                    <label><input type="checkbox" name="experience" value="clinical"> Clinical (RN/MD/PA/NP/MA)</label>
+                    <label><input type="checkbox" name="experience" value="behavioral"> Behavioral health / counseling</label>
+                    <label><input type="checkbox" name="experience" value="admin"> Healthcare admin / billing</label>
+                    <label><input type="checkbox" name="experience" value="outreach"> Outreach / events / comms</label>
+                    <label><input type="checkbox" name="experience" value="logistics"> Logistics / operations</label>
+                    <label><input type="checkbox" name="experience" value="grant"> Grant writing / fundraising</label>
+                    <label><input type="checkbox" name="experience" value="other"> Other</label>
+                </fieldset>
+
+                <label for="vol-notes">Notes (availability, interests)</label>
+                <textarea id="vol-notes" name="notes" rows="3"></textarea>
+
+                <button type="submit" class="cta-button">Submit</button>
+            </form>
+        </div>
+    </div>
 
     <footer class="theme-dark">
         <div class="footer-content">
@@ -360,6 +396,7 @@
                 <h4>Contact Us</h4>
                 <p><strong>General inquiries:</strong> <a href="mailto:info@andersonislandhealth.org">info@andersonislandhealth.org</a></p>
                 <p><strong>Fundraising:</strong> <a href="mailto:giving@andersonislandhealth.org">giving@andersonislandhealth.org</a></p>
+                <p><strong>P.O. Box 88973, Steilacoom, WA 98388</strong></p>
             </div>
         </div>
         <div class="footer-bottom">

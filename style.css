@@ -1161,6 +1161,10 @@ header {
     pointer-events: auto;
 }
 
+.floating-donate.volunteer-trigger {
+    bottom: 78px;
+}
+
 .floating-donate:hover {
     box-shadow: 0 20px 46px rgba(var(--primary-dark-rgb), 0.32);
     text-decoration: none;
@@ -1409,6 +1413,89 @@ header {
     top: 50%;
     transform: translateY(calc(-50% + var(--tick-label-offset, 0px)));
     min-width: 60px;
+}
+
+/* --- Volunteer Modal --- */
+.volunteer-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+}
+
+.volunteer-modal.active {
+    display: flex;
+}
+
+.volunteer-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(22,50,79,0.55);
+    backdrop-filter: blur(6px);
+}
+
+.volunteer-dialog {
+    position: relative;
+    max-width: 520px;
+    width: min(92vw, 520px);
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 28px 64px rgba(22,50,79,0.18);
+    z-index: 1;
+}
+
+.volunteer-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #edf2f7;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.volunteer-form {
+    display: grid;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.volunteer-form label {
+    font-weight: 600;
+    color: var(--navy);
+}
+
+.volunteer-form input,
+.volunteer-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    font-family: var(--body-font);
+}
+
+.volunteer-form fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.volunteer-form legend {
+    font-weight: 700;
+    color: var(--navy);
+    padding: 0 6px;
+}
+
+.volunteer-form fieldset label {
+    display: block;
+    font-weight: 500;
+    margin: 6px 0;
 }
 
 @media (max-width: 900px) {

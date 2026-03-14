@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const progressConfig = await loadGivingProgress();
     if (progressConfig) applyGivingProgress(progressConfig);
     initThermometers(progressConfig);
+    initVolunteerModal();
 });
 
 async function injectNavbar() {
@@ -311,6 +312,47 @@ function initThermometers(config) {
             if (bulb) bulb.style.background = color;
         }
 
+function initVolunteerModal() {
+    const modal = document.querySelector('.volunteer-modal');
+    const dialog = modal?.querySelector('.volunteer-dialog');
+    if (!modal || !dialog) return;
+
+    const openers = document.querySelectorAll('.volunteer-trigger');
+    const closers = modal.querySelectorAll('[data-volunteer-close]');
+
+    const open = (evt) => {
+        if (evt) evt.preventDefault();
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        const firstInput = modal.querySelector('input, textarea, button');
+        firstInput?.focus();
+    };
+
+    const close = (evt) => {
+        if (evt) evt.preventDefault();
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+    };
+
+    openers.forEach(btn => btn.addEventListener('click', open));
+    closers.forEach(btn => btn.addEventListener('click', close));
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal || e.target.classList.contains('volunteer-backdrop')) {
+            close();
+        }
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            close();
+        }
+    });
+
+    const form = modal.querySelector('.volunteer-form');
+    form?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        close();
+    });
+}
         if (label) {
             const currentText = isNaN(currentRaw) ? '—' : `$${Math.round(currentRaw).toLocaleString()}`;
             const goalText = goal > 0 ? `$${Math.round(goal).toLocaleString()}` : 'Goal TBD';
