@@ -309,7 +309,6 @@ function initThermometers(config) {
         if (goal > 0 && fill) {
             const pct = Math.max(0, Math.min(100, (current / goal) * 100));
             fill.style.height = `${pct}%`;
-            // Blend from blue to evergreen based on percent (0 -> blue, 100 -> green)
             const start = [12, 123, 189]; // primary-rgb
             const end = [89, 168, 137];   // evergreen-teal-rgb
             const t = pct / 100;
@@ -318,6 +317,36 @@ function initThermometers(config) {
             fill.style.background = color;
             if (bulb) bulb.style.background = color;
         }
+
+        if (label) {
+            const currentText = isNaN(currentRaw) ? '—' : `$${Math.round(currentRaw).toLocaleString()}`;
+            const goalText = goal > 0 ? `$${Math.round(goal).toLocaleString()}` : 'Goal TBD';
+            label.textContent = `${currentText} of ${goalText}`;
+        }
+
+        if (updatedEl && updated) {
+            updatedEl.textContent = `Updated ${updated}`;
+        }
+
+        if (ticksWrap && goal > 0) {
+            const fractions = Array.from({ length: Math.max(1, divisions - 1) }, (_, i) => (i + 1) / divisions);
+            const ticks = fractions.map(f => {
+                const raw = goal * f;
+                const rounded = Math.max(500, Math.round(raw / 500) * 500);
+                const val = Math.min(goal, rounded);
+                const pct = Math.max(0, Math.min(100, (val / goal) * 100));
+                return { val, pct };
+            });
+            ticksWrap.style.setProperty('--tick-label-offset', `${tickLabelOffset}px`);
+            ticksWrap.innerHTML = ticks.map(t => `
+                <span class="tick" style="top:${100 - t.pct}%">
+                    <span class="tick-line"></span>
+                    <span class="tick-label">${t.val.toLocaleString()}</span>
+                </span>
+            `).join('');
+        }
+    });
+}
 
 function initVolunteerModal() {
     const modal = document.querySelector('.volunteer-modal');
@@ -354,38 +383,5 @@ function initVolunteerModal() {
         }
     });
 
-    const form = modal.querySelector('.volunteer-form');
-    form?.addEventListener('submit', (e) => {
-        e.preventDefault();
-        close();
-    });
-}
-        if (label) {
-            const currentText = isNaN(currentRaw) ? '—' : `$${Math.round(currentRaw).toLocaleString()}`;
-            const goalText = goal > 0 ? `$${Math.round(goal).toLocaleString()}` : 'Goal TBD';
-            label.textContent = `${currentText} of ${goalText}`;
-        }
-
-        if (updatedEl && updated) {
-            updatedEl.textContent = `Updated ${updated}`;
-        }
-
-        if (ticksWrap && goal > 0) {
-            const fractions = Array.from({ length: Math.max(1, divisions - 1) }, (_, i) => (i + 1) / divisions);
-            const ticks = fractions.map(f => {
-                const raw = goal * f;
-                const rounded = Math.max(500, Math.round(raw / 500) * 500);
-                const val = Math.min(goal, rounded);
-                const pct = Math.max(0, Math.min(100, (val / goal) * 100));
-                return { val, pct };
-            });
-            ticksWrap.style.setProperty('--tick-label-offset', `${tickLabelOffset}px`);
-            ticksWrap.innerHTML = ticks.map(t => `
-                <span class="tick" style="top:${100 - t.pct}%">
-                    <span class="tick-line"></span>
-                    <span class="tick-label">${t.val.toLocaleString()}</span>
-                </span>
-            `).join('');
-        }
-    });
+    // No submit handler needed; form is embedded via Google Forms iframe.
 }

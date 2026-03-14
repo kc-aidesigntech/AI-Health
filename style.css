@@ -4,6 +4,8 @@
     --primary-dark: #0a4f8a;
     --primary-rgb: 12, 123, 189;
     --primary-dark-rgb: 10, 79, 138;
+    --dark-teal: #00323a;
+    --donate-teal: #006378;
     --accent-coral: #f5a8c1;
     --sunrise-coral: #e19ab5;
     --sunrise-coral-rgb: 225, 154, 181;
@@ -1163,24 +1165,53 @@ header {
 
 .floating-donate.volunteer-trigger {
     bottom: 78px;
-    background: #00323a !important;
+    background: var(--dark-teal) !important;
     border: none;
 }
 
 .floating-donate.volunteer-trigger:hover {
-    background: #01424c !important;
+    background: var(--dark-teal) !important;
+}
+
+.floating-donate.donate-primary {
+    background: var(--donate-teal) !important;
+    border: none !important;
+    color: #ffffff !important;
+}
+
+.floating-donate.donate-primary:hover {
+    background: var(--donate-teal) !important;
+    color: #ffffff !important;
 }
 
 .volunteer-cta {
-    background: #00323a;
-    border: none;
-    color: #ffffff;
+    background: var(--dark-teal) !important;
+    border: none !important;
+    color: #ffffff !important;
 }
 
 .volunteer-cta:hover {
-    background: #01424c;
-    color: #ffffff;
-    text-decoration: none;
+    background: var(--dark-teal) !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/* Ensure volunteer buttons override other CTA styles */
+.cta-button.volunteer-trigger,
+.cta-button-secondary.volunteer-trigger,
+.volunteer-trigger {
+    background: var(--dark-teal) !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+}
+
+.cta-button.volunteer-trigger:hover,
+.cta-button-secondary.volunteer-trigger:hover,
+.volunteer-trigger:hover {
+    background: var(--dark-teal) !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
 }
 
 .floating-donate:hover {
@@ -1460,9 +1491,23 @@ header {
     width: min(92vw, 520px);
     background: #ffffff;
     border-radius: 16px;
-    padding: 24px;
+    padding: 24px 24px 28px 24px;
     box-shadow: 0 28px 64px rgba(22,50,79,0.18);
     z-index: 1;
+    max-height: 90vh;
+    overflow: auto;
+}
+
+.volunteer-embed {
+    width: 100%;
+    min-height: 640px;
+}
+
+.volunteer-embed iframe {
+    width: 100%;
+    min-height: 640px;
+    border: 0;
+    border-radius: 12px;
 }
 
 .volunteer-close {
@@ -1480,13 +1525,15 @@ header {
 
 .volunteer-form {
     display: grid;
-    gap: 10px;
+    gap: 14px;
     margin-top: 12px;
 }
 
 .volunteer-form label {
     font-weight: 600;
     color: var(--navy);
+    display: block;
+    margin-bottom: 4px;
 }
 
 .volunteer-form input,
@@ -1502,6 +1549,8 @@ header {
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 12px;
+    display: grid;
+    gap: 8px;
 }
 
 .volunteer-form legend {
@@ -1511,9 +1560,27 @@ header {
 }
 
 .volunteer-form fieldset label {
-    display: block;
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    align-items: start;
+    gap: 8px;
     font-weight: 500;
-    margin: 6px 0;
+}
+
+.volunteer-form input[type="checkbox"] {
+    margin-top: 2px;
+}
+
+.volunteer-form textarea {
+    min-height: 120px;
+}
+
+.volunteer-form button[type="submit"] {
+    width: 100%;
+    justify-self: center;
+    background: var(--dark-teal);
+    border: none;
+    color: #ffffff;
 }
 
 @media (max-width: 900px) {
