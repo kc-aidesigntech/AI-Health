@@ -1171,6 +1171,18 @@ header {
     background: #01424c !important;
 }
 
+.volunteer-cta {
+    background: #00323a;
+    border: none;
+    color: #ffffff;
+}
+
+.volunteer-cta:hover {
+    background: #01424c;
+    color: #ffffff;
+    text-decoration: none;
+}
+
 .floating-donate:hover {
     box-shadow: 0 20px 46px rgba(var(--primary-dark-rgb), 0.32);
     text-decoration: none;
