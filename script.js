@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     initLeadership();
     initFloatingDonate();
     initParallaxBanner();
+    await initEvents();
     const progressConfig = await loadGivingProgress(isFile);
     if (progressConfig) applyGivingProgress(progressConfig);
     initThermometers(progressConfig);
@@ -265,6 +266,31 @@ function initParallaxBanner() {
     update();
 }
 
+async function initEvents() {
+    const list = document.querySelector('[data-events]');
+    if (!list) return;
+
+    try {
+        const res = await fetch('events.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error(`events.json fetch failed: ${res.status}`);
+        const data = await res.json();
+        const events = Array.isArray(data.events) ? data.events : [];
+        if (!events.length) {
+            list.innerHTML = '<li>No events posted yet.</li>';
+            return;
+        }
+        list.innerHTML = events.map(ev => {
+            const title = ev.title || 'Event';
+            const date = ev.displayDate || ev.date || '';
+            const loc = ev.location ? `<div class="event-location">${ev.location}</div>` : '';
+            const desc = ev.description ? `<div class="event-desc">${ev.description}</div>` : '';
+            return `<li class="event-item"><div class="event-date">${date}</div><div class="event-title">${title}</div>${loc}${desc}</li>`;
+        }).join('');
+    } catch (err) {
+        list.innerHTML = '<li>Events are unavailable right now.</li>';
+        console.error('Could not load events.json', err);
+    }
+}
 async function loadGivingProgress(skip) {
     if (skip) return null;
     try {

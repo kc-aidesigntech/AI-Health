@@ -1308,6 +1308,44 @@ header {
     border-radius: 28px;
 }
 
+#events {
+    margin-top: 48px;
+}
+
+.event-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px auto 0;
+    max-width: 640px;
+    text-align: left;
+}
+
+.event-item {
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    box-shadow: 0 8px 18px rgba(22,50,79,0.06);
+}
+
+.event-date {
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.event-title {
+    font-weight: 700;
+    color: var(--navy);
+    margin: 2px 0 4px;
+}
+
+.event-location,
+.event-desc {
+    font-size: 0.95rem;
+    color: var(--muted-text);
+}
+
 /* --- Support Page --- */
 .support-summary .impact-list {
     list-style: none;
@@ -1759,9 +1797,30 @@ footer {
 
 .footer-section h4 {
     color: var(--accent-sky);
-    margin-bottom: 18px;
+    margin-bottom: 10px;
 }
 
+.footer-section p {
+    margin: 8px 0;
+}
+
+.footer-credit {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.footer-credit-logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.footer-credit-text p {
+    margin: 0;
+}
 .footer-section ul { list-style: none; padding: 0; }
 
 .footer-section li { margin-bottom: 8px; }
