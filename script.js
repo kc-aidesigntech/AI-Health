@@ -1,19 +1,25 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    await injectNavbar();
+    const isFile = window.location.protocol === 'file:';
+    await injectNavbar(isFile);
     initNavigation();
     initReveal();
     initLeadership();
     initFloatingDonate();
     initParallaxBanner();
-    const progressConfig = await loadGivingProgress();
+    const progressConfig = await loadGivingProgress(isFile);
     if (progressConfig) applyGivingProgress(progressConfig);
     initThermometers(progressConfig);
     initVolunteerModal();
 });
 
-async function injectNavbar() {
+async function injectNavbar(skip) {
     const target = document.querySelector('[data-include="navbar"]');
     if (!target) return;
+
+    if (skip) {
+        console.warn('Navbar include skipped on file://; run via http://localhost for includes.');
+        return;
+    }
 
     try {
         const response = await fetch('partials/navbar.html', { cache: 'no-cache' });
@@ -260,7 +266,8 @@ function initParallaxBanner() {
     update();
 }
 
-async function loadGivingProgress() {
+async function loadGivingProgress(skip) {
+    if (skip) return null;
     try {
         const res = await fetch('giving-progress.json', { cache: 'no-cache' });
         if (!res.ok) return null;
