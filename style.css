@@ -1163,12 +1163,12 @@ header {
 
 .floating-donate.volunteer-trigger {
     bottom: 78px;
-    background: #00323a;
+    background: #00323a !important;
     border: none;
 }
 
 .floating-donate.volunteer-trigger:hover {
-    background: #01424c;
+    background: #01424c !important;
 }
 
 .floating-donate:hover {
@@ -1426,8 +1426,8 @@ header {
     position: fixed;
     inset: 0;
     display: none;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
     z-index: 3000;
 }
 
@@ -1451,7 +1451,6 @@ header {
     padding: 24px;
     box-shadow: 0 28px 64px rgba(22,50,79,0.18);
     z-index: 1;
-    margin: 0 22px 110px 0;
 }
 
 .volunteer-close {
