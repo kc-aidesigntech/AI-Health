@@ -363,6 +363,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 88px;
 }
 
 .logo img { max-height: 102px; }
@@ -371,6 +372,7 @@ header {
     list-style: none;
     display: flex;
     gap: 30px;
+    align-items: center;
 }
 
 .nav-links a {
@@ -378,6 +380,7 @@ header {
     color: var(--dark-text);
     padding-bottom: 6px;
     border-bottom: 2px solid transparent;
+    line-height: 1.4;
 }
 
 .nav-links a:hover,
