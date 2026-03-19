@@ -35,6 +35,7 @@
     --gradient-rose: linear-gradient(135deg, rgba(var(--accent-coral-rgb), 0.9), rgba(220, 130, 163, 0.92));
     --gradient-ocean: linear-gradient(135deg, rgba(var(--primary-rgb), 0.92), rgba(var(--primary-dark-rgb), 0.94));
     --radius: 38px;
+    --cta-hover-overlay: rgba(255,255,255,0.14);
 }
 
 /* --- Typography --- */
@@ -297,14 +298,6 @@ hr {
     box-shadow: 0 12px 26px rgba(var(--primary-dark-rgb), 0.22);
 }
 
-.cta-button:hover { 
-    background: rgba(255,255,255,0.12);
-    color: var(--light-text);
-    border-color: rgba(var(--primary-rgb), 0.58);
-    transform: translateY(-2px);
-    text-decoration: none;
-}
-
 .cta-button-secondary {
     background: var(--gradient-rose);
     color: var(--light-text);
@@ -312,24 +305,10 @@ hr {
     box-shadow: 0 12px 26px rgba(158, 61, 111, 0.22);
 }
 
-.cta-button-secondary:hover {
-    background: rgba(255,255,255,0.12);
-    color: var(--light-text);
-    border-color: rgba(var(--accent-coral-rgb), 0.6);
-    transform: translateY(-2px);
-}
-
 .cta-button-outline {
     background: transparent;
     color: var(--primary-dark);
     border: 2px solid rgba(var(--primary-rgb), 0.45);
-}
-
-.cta-button-outline:hover {
-    background: rgba(var(--primary-bright-rgb), 0.1);
-    color: var(--primary-dark);
-    transform: translateY(-2px);
-    text-decoration: none;
 }
 
 .link-arrow {
@@ -528,18 +507,6 @@ header.header-shrink .nav-group {
 
 .hero-actions .cta-button-secondary {
     background: linear-gradient(135deg, rgba(var(--accent-coral-rgb), 0.98), rgba(220, 130, 163, 0.9));
-}
-
-/* Unified hover for hero CTAs */
-.hero-actions .cta-button:hover,
-.hero-actions .cta-button-secondary:hover,
-.hero-actions .cta-button-outline:hover,
-.hero-actions .cta-button.donate-primary:hover,
-.hero-actions .cta-button.volunteer-trigger:hover {
-    box-shadow: inset 0 0 0 999px rgba(255,255,255,0.14);
-    color: #ffffff;
-    transform: translateY(-2px);
-    text-decoration: none;
 }
 
 /* --- Home Specific Sections --- */
@@ -1207,12 +1174,6 @@ header.header-shrink .nav-group {
     transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.floating-donate.active {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-}
-
 .floating-donate.volunteer-trigger {
     bottom: 96px;
     background: var(--dark-teal) !important;
@@ -1223,6 +1184,12 @@ header.header-shrink .nav-group {
     background: var(--donate-teal) !important;
     border: none !important;
     color: #ffffff !important;
+}
+
+.floating-donate.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 .cta-button.donate-primary {
@@ -1261,18 +1228,6 @@ header.header-shrink .nav-group {
     text-decoration: none !important;
 }
 
-/* Unified hover/active overlay for donate/volunteer buttons everywhere */
-.cta-button.donate-primary:hover,
-.cta-button.volunteer-trigger:hover,
-.floating-donate:hover,
-.floating-donate.donate-primary:hover,
-.floating-donate.volunteer-trigger:hover {
-    box-shadow: inset 0 0 0 999px rgba(255,255,255,0.14);
-    color: #ffffff !important;
-    transform: translateY(-2px);
-    text-decoration: none !important;
-}
-
 /* Reset volunteer link inside nav to match other items */
 .nav-links a.volunteer-trigger,
 .nav-links a.volunteer-trigger:hover,
@@ -1292,9 +1247,19 @@ header.header-shrink .nav-group {
     border-bottom: 2px solid var(--primary-color) !important;
 }
 
-.floating-donate:hover {
-    box-shadow: 0 20px 46px rgba(var(--primary-dark-rgb), 0.32);
-    text-decoration: none;
+/* Unified hover/active overlay for all CTAs and floating buttons */
+.cta-button:hover,
+.cta-button-secondary:hover,
+.cta-button-outline:hover,
+.cta-button.donate-primary:hover,
+.cta-button.volunteer-trigger:hover,
+.floating-donate:hover,
+.floating-donate.donate-primary:hover,
+.floating-donate.volunteer-trigger:hover {
+    box-shadow: inset 0 0 0 999px var(--cta-hover-overlay);
+    color: inherit !important;
+    transform: translateY(-2px);
+    text-decoration: none !important;
 }
 
 .phase-card {
