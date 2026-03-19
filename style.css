@@ -34,6 +34,7 @@
     --gradient-navy: linear-gradient(135deg, rgba(var(--primary-dark-rgb), 0.18), rgba(var(--primary-rgb), 0.22));
     --gradient-rose: linear-gradient(135deg, rgba(var(--accent-coral-rgb), 0.9), rgba(220, 130, 163, 0.92));
     --gradient-ocean: linear-gradient(135deg, rgba(var(--primary-rgb), 0.92), rgba(var(--primary-dark-rgb), 0.94));
+    --radius: 38px;
 }
 
 /* --- Typography --- */
@@ -236,7 +237,7 @@ hr {
     background: var(--accent-sky);
     color: var(--navy);
     padding: 10px 16px;
-    border-radius: 999px;
+    border-radius: var(--radius);
     font-weight: 600;
     border: 1px solid rgba(0,152,187,0.18);
 }
@@ -250,7 +251,7 @@ hr {
 
 .card {
     background: #ffffff;
-    border-radius: 12px;
+    border-radius: var(--radius);
     border: 1px solid var(--border-color);
     padding: 26px;
     box-shadow: 0 12px 30px rgba(22,50,79,0.08);
@@ -281,7 +282,7 @@ hr {
 .cta-button-outline {
     display: inline-block;
     padding: 12px 28px;
-    border-radius: 999px;
+    border-radius: var(--radius);
     font-weight: 700;
     letter-spacing: 0.02em;
     transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
@@ -364,7 +365,7 @@ header {
     align-items: center;
 }
 
-.logo img { max-height: 82px; }
+.logo img { max-height: 102px; }
 
 .nav-links ul {
     list-style: none;
@@ -509,7 +510,7 @@ header {
     position: relative;
     background: linear-gradient(172deg, rgba(255,255,255,0.98), rgba(224,243,248,0.82));
     padding: 36px 26px;
-    border-radius: 16px;
+    border-radius: var(--radius);
     border: 1px solid rgba(0,152,187,0.14);
     box-shadow: 0 18px 36px rgba(22,50,79,0.08);
     overflow: hidden;
@@ -536,7 +537,7 @@ header {
 
 .metrics-band {
     background: var(--accent-sky);
-    border-radius: 32px;
+    border-radius: var(--radius);
     padding: 64px 28px;
     margin-top: 20px;
 }
@@ -556,7 +557,7 @@ header {
 .stat-card {
     position: relative;
     background: linear-gradient(170deg, rgba(255,255,255,0.96), rgba(224,243,248,0.8));
-    border-radius: 18px;
+    border-radius: var(--radius);
     padding: 32px 24px;
     text-align: center;
     border: 1px solid rgba(0,152,187,0.12);
@@ -599,7 +600,7 @@ header {
 .plan-highlight .cta-panel {
     position: relative;
     background: linear-gradient(165deg, rgba(244,240,234,0.94), rgba(224,243,248,0.88));
-    border-radius: 18px;
+    border-radius: var(--radius);
     padding: 34px;
     border: 1px solid rgba(0,152,187,0.12);
     box-shadow: 0 20px 36px rgba(22,50,79,0.08);
@@ -1541,13 +1542,18 @@ header {
 
 .giving-photo {
     margin: 12px 0;
+    display: flex;
+    justify-content: center;
 }
 
 .giving-photo img {
     width: 100%;
     max-width: 340px;
+    aspect-ratio: 1 / 1;
+    height: auto;
     border-radius: 38px;
     display: block;
+    object-fit: cover;
 }
 
 .thermo-ticks {
