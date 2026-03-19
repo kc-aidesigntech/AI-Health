@@ -4,6 +4,7 @@
     --primary-dark: #0a4f8a;
     --primary-rgb: 12, 123, 189;
     --primary-dark-rgb: 10, 79, 138;
+    --primary-teal: #036474;
     --dark-teal: #00323a;
     --donate-teal: #006378;
     --accent-coral: #f5a8c1;
@@ -79,6 +80,10 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--navy);
     margin-bottom: 15px;
     line-height: 1.25;
+}
+
+h2 {
+    color: var(--primary-teal);
 }
 
 h1 { font-size: 2.9rem; }
@@ -288,7 +293,8 @@ hr {
     font-weight: 700;
     letter-spacing: 0.02em;
     transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
-    box-shadow: 0 8px 22px rgba(22,50,79,0.15);
+    --cta-shadow: 0 10px 22px rgba(var(--primary-dark-rgb), 0.2);
+    box-shadow: var(--cta-shadow);
 }
 
 .cta-button {
@@ -1166,7 +1172,8 @@ header.header-shrink .nav-group {
     color: #ffffff;
     font-weight: 800;
     letter-spacing: 0.01em;
-    box-shadow: 0 16px 36px rgba(var(--primary-dark-rgb), 0.28);
+    --cta-shadow: 4px 12px 26px rgba(var(--primary-dark-rgb), 0.24);
+    box-shadow: var(--cta-shadow);
     border: 2px solid rgba(var(--primary-rgb), 0.4);
     opacity: 0;
     transform: translateY(16px);
@@ -1256,8 +1263,8 @@ header.header-shrink .nav-group {
 .floating-donate:hover,
 .floating-donate.donate-primary:hover,
 .floating-donate.volunteer-trigger:hover {
-    box-shadow: inset 0 0 0 999px var(--cta-hover-overlay);
-    color: inherit !important;
+    box-shadow: inset 0 0 0 999px var(--cta-hover-overlay), var(--cta-shadow);
+    color: #ffffff !important;
     transform: translateY(-2px);
     text-decoration: none !important;
 }
