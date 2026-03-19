@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const isFile = window.location.protocol === 'file:';
     await injectNavbar(isFile);
     initNavigation();
+    initStickyHeader();
     initReveal();
     initLeadership();
     initFloatingDonate();
@@ -18,7 +19,33 @@ async function injectNavbar(skip) {
     if (!target) return;
 
     if (skip) {
-        console.warn('Navbar include skipped on file://; run via http://localhost for includes.');
+        // Fallback markup for file:// debugging
+        target.innerHTML = `
+        <header>
+            <div class="header-container">
+                <a href="index.html" class="logo">
+                    <img src="assets/AI Health Custom Logo v9.png" alt="Anderson Island Health logo">
+                </a>
+                <div class="nav-group">
+                    <button class="hamburger-menu" aria-label="Open navigation menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <nav class="nav-links">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#mission">Our mission</a></li>
+                            <li><a href="index.html#faqs">FAQs</a></li>
+                            <li><a href="#" class="volunteer-trigger">Volunteer</a></li>
+                            <li><a href="index.html#giving">Donate</a></li>
+                            <li><a href="index.html#events">Events</a></li>
+                            <li><a href="index.html#plans">Plans</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>`;
         return;
     }
 
@@ -64,6 +91,20 @@ function initNavigation() {
     });
 }
 
+function initStickyHeader() {
+    const header = document.querySelector('header');
+    if (!header) return;
+    const threshold = 40;
+    const onScroll = () => {
+        if (window.scrollY > threshold) {
+            header.classList.add('header-shrink');
+        } else {
+            header.classList.remove('header-shrink');
+        }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+}
 function initReveal() {
     // --- Scroll Reveal Animations ---
     const revealSelectors = [
