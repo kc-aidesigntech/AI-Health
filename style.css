@@ -61,6 +61,10 @@ body {
     color: var(--dark-text);
 }
 
+html {
+    font-size: 115%;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -143,7 +147,7 @@ hr {
 
 /* --- Layout Utilities --- */
 .page-content {
-    max-width: 1140px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 60px 24px;
 }
@@ -352,7 +356,7 @@ header {
 }
 
 .header-container {
-    max-width: 1200px;
+    max-width: 1260px;
     margin: 0 auto;
     padding: 0 24px;
     display: flex;
@@ -360,7 +364,7 @@ header {
     align-items: center;
 }
 
-.logo img { max-height: 56px; }
+.logo img { max-height: 68px; }
 
 .nav-links ul {
     list-style: none;
@@ -1360,6 +1364,8 @@ header {
 
 .support-summary .grid-2-col {
     align-items: stretch;
+    gap: 24px;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.3fr);
 }
 
 .support-summary .impact-list li::before {
@@ -1522,6 +1528,26 @@ header {
     font-size: 0.92rem;
     color: var(--muted-text);
     margin: 0;
+}
+
+.mail-donate {
+    background: rgba(0,0,0,0.04);
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-size: 0.98rem;
+    color: var(--navy);
+    text-align: left;
+}
+
+.giving-photo {
+    margin: 12px 0;
+}
+
+.giving-photo img {
+    width: 100%;
+    max-width: 340px;
+    border-radius: 38px;
+    display: block;
 }
 
 .thermo-ticks {
