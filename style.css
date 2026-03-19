@@ -1351,6 +1351,12 @@ header.header-shrink .nav-group {
     text-align: left;
 }
 
+.event-list .event-message {
+    text-align: center;
+    color: var(--muted-text);
+    padding: 10px 0;
+}
+
 .event-item {
     background: #ffffff;
     border: 1px solid rgba(0,0,0,0.06);

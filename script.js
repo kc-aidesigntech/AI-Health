@@ -317,7 +317,7 @@ async function initEvents() {
         const data = await res.json();
         const events = Array.isArray(data.events) ? data.events : [];
         if (!events.length) {
-            list.innerHTML = '<li>No events posted yet.</li>';
+            list.innerHTML = '<li class="event-message">No events posted yet.</li>';
             return;
         }
         list.innerHTML = events.map(ev => {
@@ -328,7 +328,7 @@ async function initEvents() {
             return `<li class="event-item"><div class="event-date">${date}</div><div class="event-title">${title}</div>${loc}${desc}</li>`;
         }).join('');
     } catch (err) {
-        list.innerHTML = '<li>Events are unavailable right now.</li>';
+        list.innerHTML = '<li class="event-message">Events are unavailable right now.</li>';
         console.error('Could not load events.json', err);
     }
 }
