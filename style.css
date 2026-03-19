@@ -1226,6 +1226,12 @@ header {
     box-shadow: 0 10px 24px rgba(0,0,0,0.18);
 }
 
+.nav-links a.volunteer-trigger {
+    background: transparent !important;
+    color: var(--dark-text) !important;
+    box-shadow: none !important;
+}
+
 .cta-button.volunteer-trigger:hover,
 .cta-button-secondary.volunteer-trigger:hover,
 .volunteer-trigger:hover {
