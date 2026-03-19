@@ -356,7 +356,7 @@ header {
 }
 
 .header-container {
-    max-width: 1260px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 24px;
     display: flex;
@@ -364,7 +364,7 @@ header {
     align-items: center;
 }
 
-.logo img { max-height: 68px; }
+.logo img { max-height: 82px; }
 
 .nav-links ul {
     list-style: none;
