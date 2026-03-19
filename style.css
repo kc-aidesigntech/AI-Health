@@ -378,7 +378,7 @@ header {
 .nav-links a {
     font-weight: 600;
     color: var(--dark-text);
-    padding-bottom: 12px;
+    padding-bottom: 0px;
     border-bottom: 2px solid transparent;
     line-height: 1.4;
 }
