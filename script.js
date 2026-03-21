@@ -1,10 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const isFile = window.location.protocol === 'file:';
 
-    // Respect site maintenance mode before doing any other work
-    const isLive = await checkSiteStatus(isFile);
-    if (!isLive) return;
-
     await injectNavbar(isFile);
     initNavigation();
     initStickyHeader();
@@ -18,120 +14,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     initThermometers(progressConfig);
     initVolunteerModal();
 });
-
-function wantsUnderConstructionPreview() {
-    const p = new URLSearchParams(window.location.search);
-    const uc = p.get('uc');
-    if (uc === '1' || uc === 'true' || p.has('under_construction')) return true;
-    if (p.get('preview') === 'uc' || p.get('preview') === 'under_construction') return true;
-    return false;
-}
-
-function previewUnderConstructionMessage() {
-    const p = new URLSearchParams(window.location.search);
-    const raw = p.get('message');
-    if (!raw) return null;
-    try {
-        return decodeURIComponent(raw);
-    } catch {
-        return raw;
-    }
-}
-
-function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-}
-
-async function checkSiteStatus(skip) {
-    // URL preview: works with file:// and http(s) — use ?uc=1 or ?preview=uc
-    if (wantsUnderConstructionPreview()) {
-        const msg = previewUnderConstructionMessage();
-        renderUnderConstruction({ message: msg || undefined });
-        return false;
-    }
-
-    // file:// cannot fetch site-status.json; skip to live unless ?uc=1 above
-    if (skip) return true;
-
-    try {
-        const res = await fetch('site-status.json', { cache: 'no-cache' });
-        if (!res.ok) return true;
-        const data = await res.json();
-        if (data?.mode === 'under_construction') {
-            renderUnderConstruction(data);
-            return false;
-        }
-    } catch (err) {
-        console.warn('Site status check failed, continuing as live.', err);
-    }
-    return true;
-}
-
-function renderUnderConstruction(data = {}) {
-    const rawMessage = data.message || 'We are preparing something great. Please check back soon.';
-    const message = escapeHtml(rawMessage);
-    const logo = 'assets/AI Health Custom Logo v9.png';
-
-    const style = document.createElement('style');
-    style.textContent = `
-        :root { color-scheme: light; }
-        body {
-            margin: 0;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background: linear-gradient(135deg, #e8f4fb, #f8eef1);
-            color: #0c7bbd;
-        }
-        .uc-shell {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 32px;
-            text-align: center;
-        }
-        .uc-card {
-            background: #ffffff;
-            border-radius: 28px;
-            padding: 40px 32px;
-            max-width: min(96vw, 920px);
-            width: 100%;
-            box-shadow: 0 14px 36px rgba(0,0,0,0.14);
-            border: 1px solid rgba(0,0,0,0.04);
-        }
-        .uc-logo {
-            display: block;
-            width: min(88vw, 720px);
-            max-width: 100%;
-            height: auto;
-            margin: 0 auto 28px;
-        }
-        .uc-title {
-            font-size: 1.8rem;
-            margin: 0 0 10px;
-            color: #0c7bbd;
-            letter-spacing: 0.02em;
-        }
-        .uc-sub {
-            margin: 0;
-            color: #2d3a4a;
-            font-size: 1.05rem;
-        }
-    `;
-    document.head.innerHTML = '';
-    document.head.appendChild(style);
-
-    document.body.innerHTML = `
-        <div class="uc-shell">
-            <div class="uc-card">
-                <img class="uc-logo" src="${logo}" alt="Anderson Island Health logo">
-                <h1 class="uc-title">Under Construction</h1>
-                <p class="uc-sub">${message}</p>
-            </div>
-        </div>
-    `;
-}
 
 async function injectNavbar(skip) {
     const target = document.querySelector('[data-include="navbar"]');
