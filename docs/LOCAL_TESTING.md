@@ -26,11 +26,17 @@ There is **no** JSON or script toggle. You choose which file is the public homep
 | File | Role |
 |------|------|
 | **`index.html`** | Full site (what visitors get when the server looks for `index.html`) |
-| **`index.html.construction`** | Standalone “Under Construction” page (large logo + message). Edit the paragraph inside that file. |
+| **`under-construction.html`** | Standalone “Under Construction” page (large logo + message). Edit the paragraph inside that file. |
 
-**Go live:** deploy/rename so **`index.html`** is your main entry (keep `index.html.construction` in the repo as a backup).
+**Go live:** deploy/rename so **`index.html`** is your main entry (keep **`index.html.live`** in the repo as a duplicate backup of the full homepage).
 
-**Show construction:** replace the deployed **`index.html`** with the contents of **`index.html.construction`** (or rename/swap as your host allows). Keep a backup of the real homepage (e.g. `index.html.live` or git).
+**Show construction:** replace the deployed **`index.html`** with **`under-construction.html`** (or swap filenames on the host). Keep a backup of the full site (e.g. **`index.html.live`** or git).
+
+---
+
+## Launch, SEO, and Search Console
+
+See **[LAUNCH.md](LAUNCH.md)** for canonical URL notes, sitemap submission, and post-deploy checks.
 
 ---
 

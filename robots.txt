@@ -1,0 +1,5 @@
+# Anderson Island Health — allow public pages; reference sitemap after deploy.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.andersonislandhealth.org/sitemap.xml
