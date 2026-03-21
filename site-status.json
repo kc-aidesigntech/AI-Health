@@ -1,5 +1,5 @@
 {
-  "mode": "live",
-  "message": "We are preparing something great. Please check back soon.",
-  "comment": "switch mode to 'live' when ready"
+  "mode": "under construction",
+  "message": "We are preparing something great, expected to release April 1st!",
+  "comment": "switch mode to 'live' when ready and 'under construction' when not ready"
 }
