@@ -71,8 +71,32 @@
       ]
     }
     </script>
+    <!-- If already signed in this session, skip login flash -->
+    <script>
+    try {
+        if (sessionStorage.getItem('aiha_site_unlocked') === '1') {
+            document.documentElement.classList.add('site-auth-ready');
+        }
+    } catch (e) { /* private mode / blocked storage */ }
+    </script>
 </head>
 <body>
+
+    <div id="site-login-overlay" class="site-login-overlay" role="dialog" aria-modal="true" aria-labelledby="site-login-title">
+        <div class="site-login-card">
+            <p class="site-login-brand">Anderson Island Health</p>
+            <h1 id="site-login-title">Preview access</h1>
+            <p class="site-login-lead">Enter the username and password to view this site.</p>
+            <form id="site-login-form" novalidate>
+                <label class="site-login-label" for="site-login-user">Username</label>
+                <input class="site-login-input" id="site-login-user" name="username" type="text" autocomplete="username" required>
+                <label class="site-login-label" for="site-login-pass">Password</label>
+                <input class="site-login-input" id="site-login-pass" name="password" type="password" autocomplete="current-password" required>
+                <p class="site-login-error" id="site-login-error" hidden role="alert">That username or password doesn’t match.</p>
+                <button class="site-login-submit" type="submit">View website</button>
+            </form>
+        </div>
+    </div>
 
     <div data-include="navbar"></div>
 
@@ -439,6 +463,7 @@
         </div>
     </footer>
 
+    <script src="site-auth.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
