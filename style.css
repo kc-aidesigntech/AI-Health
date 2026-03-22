@@ -41,15 +41,7 @@
 }
 
 /* --- Typography --- */
-@font-face {
-    font-family: 'Congenial';
-    src: local('Congenial Regular'), local('Congenial'),
-         url('assets/fonts/Congenial-Regular.woff2') format('woff2'),
-         url('assets/fonts/Congenial-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
+/* Congenial is loaded via Adobe Fonts (Typekit) in HTML — do not reference missing local /assets/fonts files (avoids 404 on deploy). */
 
 /* --- Global Reset --- */
 * {
