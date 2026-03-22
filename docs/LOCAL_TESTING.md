@@ -28,9 +28,9 @@ There is **no** JSON or script toggle. You choose which file is the public homep
 | **`index.html`** | Full site (what visitors get when the server looks for `index.html`) |
 | **`under-construction.html`** | Standalone “Under Construction” page (large logo + message). Edit the paragraph inside that file. |
 
-**Go live:** deploy/rename so **`index.html`** is your main entry (keep **`index.html.live`** in the repo as a duplicate backup of the full homepage).
+**Go live:** deploy/rename so **`index.html`** is your main entry (keep **`index.html.finished`** in the repo as a duplicate backup of the full homepage).
 
-**Show construction:** replace the deployed **`index.html`** with **`under-construction.html`** (or swap filenames on the host). Keep a backup of the full site (e.g. **`index.html.live`** or git).
+**Show construction:** replace the deployed **`index.html`** with **`under-construction.html`** (or swap filenames on the host). Keep a backup of the full site (e.g. **`index.html.finished`** or git).
 
 ---
 

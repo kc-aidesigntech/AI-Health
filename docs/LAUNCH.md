@@ -15,7 +15,7 @@ If your live site uses the **apex** domain only (`https://andersonislandhealth.o
 ## Construction vs live homepage
 
 - **`index.html`** — Full public site (current default).
-- **`under-construction.html`** — Standalone “Under Construction” page with favicon. To show it at `/`, rename/swap files on the host (keep a backup of the full `index.html` as `index.html.live` in the repo).
+- **`under-construction.html`** — Standalone “Under Construction” page with favicon. To show it at `/`, rename/swap files on the host (keep a backup of the full `index.html` as **`index.html.finished`** in the repo).
 
 ## Files added for SEO & crawlers
 
