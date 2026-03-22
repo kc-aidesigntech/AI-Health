@@ -517,6 +517,14 @@ header.header-shrink .nav-group {
     overflow: hidden;
 }
 
+/*
+ * Gap from hero: padding alone sits *inside* the gradient, so the panel still touched the blue hero.
+ * margin-top lets the page background show between sections (matches .parallax-banner margin: 40px 0).
+ */
+#mission.strategic-pillars.page-content {
+    margin-top: 40px;
+}
+
 /* Our Purpose: full-width caption, then two columns with matching h2 */
 .strategic-pillars.mission-purpose .mission-purpose-lead {
     display: block;
