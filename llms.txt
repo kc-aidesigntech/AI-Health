@@ -1,6 +1,6 @@
-# Anderson Island Health (AIHA)
+# Anderson Island Healthcare Advocates (AIHA)
 
-> Public information about Anderson Island Healthcare Advocates — a Washington nonprofit facilitating access to primary care on Anderson Island.
+> Public information about Anderson Island Healthcare Advocates (AIHA) — a Washington nonprofit facilitating health care delivery on Anderson Island.
 
 - Site: https://www.andersonislandhealth.org/
 - General inquiries: info@andersonislandhealth.org
