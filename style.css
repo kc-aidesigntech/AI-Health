@@ -508,12 +508,60 @@ header.header-shrink .nav-group {
 }
 
 /* --- Home Specific Sections --- */
+/* Mission / Our Purpose only (see index.html); keep copy left-aligned */
 .strategic-pillars {
-    text-align: center;
+    text-align: left;
     background: linear-gradient(160deg, rgba(224,243,248,0.58), rgba(244,240,234,0.6));
     border-radius: 32px;
     box-shadow: 0 24px 48px rgba(22,50,79,0.08);
     overflow: hidden;
+}
+
+/* Our Purpose: full-width caption, then two columns with matching h2 */
+.strategic-pillars.mission-purpose .mission-purpose-lead {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    margin-bottom: 22px;
+}
+
+/* Button label stays centered inside the pill; block sits in left-aligned column */
+#mission.strategic-pillars .cta-button {
+    text-align: center;
+}
+
+.strategic-pillars.mission-purpose .mission-purpose-grid {
+    align-items: start;
+}
+
+.strategic-pillars.mission-purpose .mission-purpose-col {
+    text-align: left;
+}
+
+.strategic-pillars.mission-purpose .mission-purpose-col h2 {
+    margin-top: 0;
+    text-align: left;
+}
+
+.strategic-pillars.mission-purpose .mission-purpose-col p {
+    text-align: left;
+}
+
+.strategic-pillars.mission-purpose .mission-purpose-col .link-arrow {
+    justify-content: flex-start;
+}
+
+.strategic-pillars.mission-purpose .mission-purpose-col.cta-panel {
+    background: linear-gradient(172deg, rgba(255,255,255,0.98), rgba(224,243,248,0.82));
+    border-radius: var(--radius);
+    padding: 28px 26px;
+    border: 1px solid rgba(0,152,187,0.14);
+    box-shadow: 0 18px 36px rgba(22,50,79,0.08);
+}
+
+.strategic-pillars.mission-purpose .mission-purpose-col .cta-button {
+    margin-top: 8px;
 }
 
 .pillar-card {
@@ -1404,6 +1452,25 @@ header.header-shrink .nav-group {
     position: absolute;
     left: 0;
     color: var(--accent-teal);
+}
+
+/* Charity / tax disclaimer (between Fundraising and FAQs) */
+.charity-disclosure.page-content {
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+.charity-disclosure p {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--muted-text);
+    margin: 0;
+    max-width: 52rem;
+}
+
+.charity-disclosure a {
+    color: var(--primary-dark);
+    word-break: break-all;
 }
 
 .giving-card {

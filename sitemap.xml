@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Main site is index.html; URLs below point to on-page sections (id anchors). -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.andersonislandhealth.org/</loc>
@@ -6,17 +7,32 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.andersonislandhealth.org/plans.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.andersonislandhealth.org/#mission</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.andersonislandhealth.org/support.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.andersonislandhealth.org/#plans</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.andersonislandhealth.org/wellness.html</loc>
+    <loc>https://www.andersonislandhealth.org/#giving</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.andersonislandhealth.org/#faqs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.andersonislandhealth.org/#events</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.andersonislandhealth.org/#contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -22,7 +22,7 @@ If your live site uses the **apex** domain only (`https://andersonislandhealth.o
 | File | Purpose |
 |------|---------|
 | [robots.txt](../robots.txt) | Allow crawlers; points to sitemap |
-| [sitemap.xml](../sitemap.xml) | URL list for Search Console |
+| [sitemap.xml](../sitemap.xml) | Homepage + major on-page section anchors (`#mission`, `#plans`, etc.) for Search Console |
 | [llms.txt](../llms.txt) | Optional policy blurb for AI crawlers |
 | [404.html](../404.html) | Custom not-found if your host supports it |
 | [assets/favicon/favicon-512.png](../assets/favicon/favicon-512.png) | Favicon / social image (copy of white square logo) |
