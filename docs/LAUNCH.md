@@ -25,7 +25,7 @@ If your live site uses the **apex** domain only (`https://andersonislandhealth.o
 | [sitemap.xml](../sitemap.xml) | Homepage + major on-page section anchors (`#mission`, `#plans`, etc.) for Search Console |
 | [llms.txt](../llms.txt) | Optional policy blurb for AI crawlers |
 | [404.html](../404.html) | Custom not-found if your host supports it |
-| [assets/favicon/favicon-512.png](../assets/favicon/favicon-512.png) | Favicon / social image (copy of white square logo) |
+| [assets/favicon/](../assets/favicon/) | Real Favicon package: `favicon.ico`, `favicon.svg`, `favicon-96x96.png`, `apple-touch-icon.png`, `site.webmanifest`, PWA maskable icons |
 
 ## Verification
 
