@@ -9,14 +9,15 @@
     <title>Under Construction — Anderson Island Health</title>
     <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/favicon-512.png">
     <link rel="apple-touch-icon" href="assets/favicon/favicon-512.png">
-    <meta name="theme-color" content="#0c7bbd">
+    <meta name="theme-color" content="#036474">
+    <link rel="stylesheet" href="https://use.typekit.net/siy6qpg.css">
+    <link rel="stylesheet" href="style.css">
     <style>
-        :root { color-scheme: light; }
-        body {
-            margin: 0;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        /* UC page: no fixed header — reset body padding from global style.css */
+        body.uc-page {
+            padding-top: 0;
+            min-height: 100vh;
             background: linear-gradient(135deg, #e8f4fb, #f8eef1);
-            color: #0c7bbd;
         }
         .uc-shell {
             min-height: 100vh;
@@ -28,7 +29,7 @@
         }
         .uc-card {
             background: #ffffff;
-            border-radius: 28px;
+            border-radius: var(--radius);
             padding: 40px 32px;
             max-width: min(96vw, 920px);
             width: 100%;
@@ -42,24 +43,23 @@
             height: auto;
             margin: 0 auto 28px;
         }
-        .uc-title {
-            font-size: 1.8rem;
-            margin: 0 0 10px;
-            color: #0c7bbd;
-            letter-spacing: 0.02em;
+        /* h1 uses global typography from style.css; brand color for this page */
+        .uc-card h1 {
+            color: var(--primary-teal);
+            margin-bottom: 12px;
         }
-        .uc-sub {
+        .uc-card .uc-sub {
             margin: 0;
-            color: #2d3a4a;
-            font-size: 1.05rem;
+            color: var(--dark-text);
+            font-size: 1.02rem;
         }
     </style>
 </head>
-<body>
+<body class="uc-page">
     <div class="uc-shell">
         <div class="uc-card">
             <img class="uc-logo" src="assets/AI Health Custom Logo v9.png" alt="Anderson Island Health logo">
-            <h1 class="uc-title">Under Construction</h1>
+            <h1>Under Construction</h1>
             <p class="uc-sub">We are preparing something great. Please check back soon, we're scheduled to launch April 1st!</p>
         </div>
     </div>
