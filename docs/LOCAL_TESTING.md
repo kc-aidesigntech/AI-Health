@@ -46,11 +46,9 @@ Use **Live Server** and open `index.html` — it serves over **http://** automat
 
 ---
 
-## Preview login (`index.html`)
+## Optional preview login (not enabled by default)
 
-The homepage can show a **login overlay** (see `site-auth.js`). Default credentials are **`aiha`** / **`preview`**—change `USERNAME` and `PASSWORD` in `site-auth.js` before sharing. Unlock lasts for the **browser session** (`sessionStorage`).
-
-**Remove the gate for public launch:** delete the overlay markup and head script from `index.html`, remove the `<script src="site-auth.js">` tag, and delete or stop loading `site-auth.js` (client-side “passwords” are visible in the file).
+To gate the homepage behind a simple username/password for previews, follow **[optional/site-login-gate/README.md](../optional/site-login-gate/README.md)**. Credentials are client-side only—not secure for real protection.
 
 ---
 

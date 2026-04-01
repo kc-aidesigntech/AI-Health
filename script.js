@@ -1,5 +1,14 @@
+function initFooterCopyrightYear() {
+    const year = String(new Date().getFullYear());
+    document.querySelectorAll('[data-copyright-year]').forEach((el) => {
+        el.textContent = year;
+    });
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
     const isFile = window.location.protocol === 'file:';
+
+    initFooterCopyrightYear();
 
     await injectNavbar(isFile);
     initNavigation();

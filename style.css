@@ -2128,10 +2128,8 @@ footer {
     .pillar-card { padding: 26px 20px; }
 }
 
-/* --- Site login gate (index.html preview) --- */
-html:not(.site-auth-ready) body {
-    overflow: hidden;
-}
+/* --- Site login gate (optional; see optional/site-login-gate/README.md) --- */
+/* When re-enabling the overlay, restore scroll lock: html:not(.site-auth-ready) body { overflow: hidden; } */
 
 .site-login-overlay {
     position: fixed;

@@ -2,10 +2,9 @@
  * Simple client-side preview gate for index.html.
  *
  * SECURITY: Credentials in this file are visible to anyone. This only keeps
- * casual visitors out. For a public launch, remove the overlay HTML from
- * index.html and stop loading this script—or use real server-side auth.
+ * casual visitors out. For production, use real server-side auth if you need security.
  *
- * Change USERNAME and PASSWORD below before sharing the preview URL.
+ * Change USERNAME and PASSWORD below before sharing a preview URL.
  */
 (function () {
     var USERNAME = 'aiha';

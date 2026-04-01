@@ -6,6 +6,10 @@ Canonical URLs, Open Graph, JSON-LD, `robots.txt`, and `sitemap.xml` use:
 
 If your live site uses the **apex** domain only (`https://andersonislandhealth.org`) or **non-www**, search the repo for `www.andersonislandhealth.org` and replace with your chosen canonical host, then redeploy.
 
+## Archived HTML (`archive/`)
+
+Draft pages live under **`archive/`** and are **not** part of the public site map or navigation. If your host publishes the whole repository, either **exclude `archive/`** from the deploy output or expect those files to be reachable under `/archive/…` (then add **noindex** via headers or remove the folder from deploy).
+
 ## After first deploy
 
 1. **HTTPS** — Confirm the padlock; fix any mixed-content (HTTP assets on HTTPS).
@@ -31,8 +35,12 @@ If your live site uses the **apex** domain only (`https://andersonislandhealth.o
 
 - Run **Lighthouse** (Chrome DevTools) on `/` and one inner page: Performance, Accessibility, SEO, Best Practices.
 - Click through nav, donate (Zeffy), volunteer modal, and external PCHS links.
-- **Console** — No uncaught errors on home and [plans.html](../plans.html).
+- **Console** — No uncaught errors on the homepage (`index.html`).
 
 ## Local testing
 
 See [LOCAL_TESTING.md](LOCAL_TESTING.md).
+
+## SEO & AI-oriented content (AIO)
+
+See **[SEO_AND_AIO.md](SEO_AND_AIO.md)** for crawl/indexing, structured data, `llms.txt`, and launch checks beyond this checklist.

@@ -71,21 +71,21 @@ There is **no server-side application** in this repository—no Node API, no dat
 | Path | Role |
 |------|------|
 | `index.html` | Main homepage (hero, mission, plans, fundraising, events, FAQs, contact) |
-| `wellness.html`, `plans.html`, `support.html` | Secondary pages |
-| `about.html` | Redirects to `wellness.html` |
+| `archive/` | Draft HTML (`wellness`, `plans`, `support`, `about`) — **not** part of the live site or sitemap; see `archive/README.md` |
 | `404.html` | Not-found page |
-| `index-under-construction.html` | Standalone “under construction” page (swap with homepage on deploy if needed; see docs) |
+| `optional/index-under-construction.html` | Standalone “under construction” page (copy/rename on deploy if needed; see docs) |
 | `partials/navbar.html` | Shared **navigation**; injected at runtime |
 | `style.css` | Global styles |
-| `script.js` | Behavior: navbar, nav, sticky header, scroll reveal, parallax, events, fundraising, volunteer modal, etc. |
-| `site-auth.js` | **Optional** client-side preview login for `index.html` only — not secure for secrets; remove before public launch if unused |
+| `script.js` | Behavior: navbar, nav, sticky header, scroll reveal, parallax, events, fundraising, volunteer modal, **footer copyright year** (`[data-copyright-year]`), etc. |
+| `optional/site-login-gate/` | **Optional** client-side preview login (not wired into `index.html` by default); see `README.md` in that folder |
 | `events.json` | **Events list** consumed by the homepage |
 | `giving-progress.json` | **Fundraising goal** numbers for thermometers / labels |
 | `assets/` | Images, logos, favicon package |
 | `robots.txt` / `sitemap.xml` | Crawlers & SEO |
 | `llms.txt` | Short policy blurb for AI crawlers |
 | `docs/LAUNCH.md` | SEO checklist, Search Console, construction vs live |
-| `docs/LOCAL_TESTING.md` | Local server, preview login, deploy notes |
+| `docs/SEO_AND_AIO.md` | SEO + AI/LLM crawler guidance, structured data, post-launch tuning |
+| `docs/LOCAL_TESTING.md` | Local server, optional login gate notes, deploy |
 
 ---
 
@@ -116,10 +116,9 @@ There is **no server-side application** in this repository—no Node API, no dat
 
 - Modal + iframe embed in `index.html`; update the Google Form URL if the form changes.
 
-### Preview login gate (`site-auth.js`)
+### Optional preview login
 
-- Optional **username/password** in `site-auth.js`; session via `sessionStorage`.
-- **Remove** overlay markup, head script, and script tag for production if you don’t want a gate (see `docs/LOCAL_TESTING.md`).
+- Stored under **`optional/site-login-gate/`** (script + reactivation steps). Not enabled on the live `index.html` by default.
 
 ### SEO & social
 
@@ -148,7 +147,7 @@ python3 -m http.server 8765
 # Open http://127.0.0.1:8765/index.html
 ```
 
-Details, **construction page swap**, and **preview login**: see **[docs/LOCAL_TESTING.md](docs/LOCAL_TESTING.md)**.
+Details and **construction page swap**: see **[docs/LOCAL_TESTING.md](docs/LOCAL_TESTING.md)** (optional login gate is documented there too).
 
 Post-deploy SEO and Search Console: **[docs/LAUNCH.md](docs/LAUNCH.md)**.
 
@@ -160,8 +159,8 @@ Post-deploy SEO and Search Console: **[docs/LAUNCH.md](docs/LAUNCH.md)**.
 2. Confirm **`index.html`** is the deployed homepage (or intentionally swap for construction page).
 3. HTTPS, mixed content, Zeffy + volunteer links work.
 4. Submit **`sitemap.xml`** in Google Search Console.
-5. Run **Lighthouse** on `/` and at least one inner page.
-6. If using the **preview login**, change credentials in `site-auth.js` or remove the gate before broad public launch.
+5. Run **Lighthouse** on `/` (and on `404.html` if you deploy it).
+6. If you **re-enable** the optional preview login, set credentials in `optional/site-login-gate/site-auth.js`.
 
 ---
 
