@@ -284,11 +284,10 @@ function initParallaxBanner() {
     const update = () => {
         banners.forEach((el) => {
             const speed = parseFloat(el.dataset.parallaxSpeed || '0.25');
-            const rect = el.getBoundingClientRect();
             const scrolled = window.scrollY || window.pageYOffset;
             const offsetTop = el.offsetTop;
             const yPos = (scrolled - offsetTop) * speed;
-            el.style.backgroundPosition = `center calc(50% + ${yPos}px)`;
+            el.style.setProperty('--parallax-y', `${yPos}px`);
         });
     };
 

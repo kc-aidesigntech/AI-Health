@@ -46,6 +46,14 @@ Use **Live Server** and open `index.html` — it serves over **http://** automat
 
 ---
 
+## Preview login (`index.html`)
+
+The homepage can show a **login overlay** (see `site-auth.js`). Default credentials are **`aiha`** / **`preview`**—change `USERNAME` and `PASSWORD` in `site-auth.js` before sharing. Unlock lasts for the **browser session** (`sessionStorage`).
+
+**Remove the gate for public launch:** delete the overlay markup and head script from `index.html`, remove the `<script src="site-auth.js">` tag, and delete or stop loading `site-auth.js` (client-side “passwords” are visible in the file).
+
+---
+
 ## Checklist before deploy
 
 - [ ] Test over **http://localhost** (not only `file://`).
