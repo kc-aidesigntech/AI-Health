@@ -11,6 +11,14 @@ This folder holds a **client-side** username/password overlay for `index.html`. 
 
 Styles for the overlay live in the main **`style.css`** (search for `.site-login-` and `site-auth-ready`). No extra CSS file is required unless you remove those rules later.
 
+**Scroll lock while the gate is active:** add this back to `style.css` (see comment above `.site-login-overlay`):
+
+```css
+html:not(.site-auth-ready) body {
+    overflow: hidden;
+}
+```
+
 ## Reactivate the gate
 
 1. In **`index.html`**, immediately **before** `</head>`, add:
